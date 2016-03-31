@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Как мы домены мониторили &middot; Gen1us2k</title>
+        <title>Используем Git в качестве инструмента для деплоя веб приложения &middot; Gen1us2k</title>
         <meta name="description" content="">
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
@@ -80,7 +80,7 @@
 <div class="container">
     <article class="post-container" itemscope="" itemtype="http://schema.org/BlogPosting">
         <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">Как мы домены мониторили</h1>
+    <h1 class="post-title" itemprop="name headline">Используем Git в качестве инструмента для деплоя веб приложения</h1>
     
     <p class="post-date">
         <span>Published <time datetime="2016-03-31" itemprop="datePublished">Thu, Mar 31, 2016</time></span>
@@ -98,66 +98,42 @@
 
     
 
-<p>Всем привет! Все началось с того, что у нас в компании развелось очень много доменов которые нужно вовремя продлевать. И вот, после одного провала с продлением доменов, было принято решение начать мониторить дату истечения домена и выводить его в мониторинге Nagios.</p>
+<h3 id="что-имеем:0814af543608f4fd171b2e9cf43d9917">Что имеем</h3>
 
-<h4 id="как-мониторить:ab1b71fc907eef6a6ae61cecfc19728a">Как мониторить?</h4>
+<p>У нас есть веб приложение, которое мы разрабатываем. Нам нужно быстро и легко добавлять изменения на продакшн</p>
 
-<p>У нас было несколько доменов в зонах kz, ru, kg, ge, com.</p>
+<h4 id="что-предлагает-нам-git:0814af543608f4fd171b2e9cf43d9917">Что предлагает нам Git</h4>
 
-<p>Самый простой способ узнать всю нужную информацию о домене — запустить whois. Это по идее должен знать каждый. Но как все это дело внедрить в мониторинг?</p>
+<p>post-merge — Этот хук вызывается ‘git-merge’, после того, как мы выполнили &lsquo;git-pull’ или &lsquo;git-merge’ на локальном репозитории. Хук не выполнится, если у нас будут конфликты при мердже.
+post-checkout — Этот хук вызывается &lsquo;git-checkout’, после того, как мы выполним &lsquo;git-clone’ или &lsquo;git-checkout’.</p>
 
-<h4 id="чем-мониторить:ab1b71fc907eef6a6ae61cecfc19728a">Чем мониторить?</h4>
+<h4 id="что-делаем:0814af543608f4fd171b2e9cf43d9917">Что делаем</h4>
 
-<p>Покопавшись по просторам интернета, был найден модуль <a href="https://pypi.python.org/pypi/python-whois">python-whois</a>.
-Он хорошо выполнял свою работу для доменов com, net и кучи других доменов, описанных в описании к модулю.</p>
+<p>Механизм деплоя будет примерно таким:
+1. Поднимаем git сервер. Переводим всю разработку на git. Протестированный код заливаем в репозиторий
+2. Пишем хуки, которые будут делать то, что нам нужно сделать после деплоя. В данном случае хук post-merge.
+3. Если хотим развернуть рабочую конфигурацию на чистом сервере, то пишем хук post-checkout</p>
 
-<p>Не хватало функционала для нескольких доменов в зонах kg.</p>
+<h4 id="к-примеру-нам-после-деплоя-надо-почистить-какую-то-папку-и-перезагрузить-апач:0814af543608f4fd171b2e9cf43d9917">К примеру, нам после деплоя надо почистить какую-то папку и перезагрузить апач.</h4>
 
-<p>В итоге появился форк проекта <a href="https://github.com/gen1us2k/python-whois">python-whois-extended</a>, который расширяет функционал для больших TLD.</p>
-
-<p>Ок, как внедрить в нагиос?</p>
-
-<p>Все просто, пишем простой чек</p>
-
-<pre><code>#!/usr/bin/env python#
-# Usage:
-# python check_domain.py -d DOMAIN
-import whois
-from datetime import datetime
-
-from sys import exit
-from optparse import OptionParser
-
-
-def check_domain(domain):
-    q = whois.query(domain)
-    if (q.expiration_date - datetime.now()).days &lt;= 30:
-        print &quot;CRITICAL: Domain: {0} expires on {1}&quot;.format(domain, q.expiration_date)
-        exit(2)
-    print &quot;OK: Domain: {0} expires on {1}&quot;.format(domain, q.expiration_date)
-
-if __name__ == '__main__':
-    parser = OptionParser()
-    parser.add_option(&quot;-d&quot;, &quot;--domain&quot;, dest=&quot;domain&quot;, help=&quot;Domain to monitor expiry date&quot;)
-    (options, args) = parser.parse_args()
-    if not options.domain:
-        print parser.print_help()
-        exit(0)
-
-    check_domain(options.domain)
+<pre><code>#!/bin/bash /etc/init.d/apache2 stop find /path/to/folder -type f -delete /etc/init.d/apache2 start
 </code></pre>
 
-<p>Что он делает? Светит красным в мониторинге за месяц до истечения домена.</p>
+<p>Положим этот скрипт в .git/hooks/post-merge.
+Выполняем git pull и у нас выполняется этот скрипт</p>
 
-<p>Что интересно, появился еще один мейнтейнер, который добавил поддержку для hk, cn и kr TLD.</p>
+<p>Аналогично и для хука post-checkout</p>
 
-<p>Текущий список поддерживаемых доменов такой:</p>
+<p>Плюсы:</p>
 
-<p>com, net, org, uk, pl, ru, lv, jp, co_jp, de, at, eu, biz, info, name, us, co, me, be, nz, cz, it, fr, kg, vc, fm, tv, edu, ca, cn, kr, hk</p>
+<p>Быстрая доставка изменений на продакшн.
+Автоматизация
+Централизированное хранение рабочего веб проекта</p>
 
-<p>Пул-реквесты, запросы фич привествуются!</p>
+<p>Минусы:</p>
 
-<p>Надеюсь, мой опыт поможет избавиться от подобной проблемы</p>
+<p>Данная схема не будет работать, если мы будем создавать новые ветки, путем git checkout -b newBranch
+Данная схема не будет работать, если мы будем вручную мерджить изменения в локальном хранилище.</p>
 
 </div>
 
@@ -165,19 +141,19 @@ if __name__ == '__main__':
     
 
     <div class="share">
-        <a class="icon-twitter" href="http://twitter.com/share?text=%d0%9a%d0%b0%d0%ba%20%d0%bc%d1%8b%20%d0%b4%d0%be%d0%bc%d0%b5%d0%bd%d1%8b%20%d0%bc%d0%be%d0%bd%d0%b8%d1%82%d0%be%d1%80%d0%b8%d0%bb%d0%b8&url=http%3a%2f%2fgen1us2k.github.io%2f2016%2f03%2f31%2fdomains%2f"
+        <a class="icon-twitter" href="http://twitter.com/share?text=%d0%98%d1%81%d0%bf%d0%be%d0%bb%d1%8c%d0%b7%d1%83%d0%b5%d0%bc%20Git%20%d0%b2%20%d0%ba%d0%b0%d1%87%d0%b5%d1%81%d1%82%d0%b2%d0%b5%20%d0%b8%d0%bd%d1%81%d1%82%d1%80%d1%83%d0%bc%d0%b5%d0%bd%d1%82%d0%b0%20%d0%b4%d0%bb%d1%8f%20%d0%b4%d0%b5%d0%bf%d0%bb%d0%be%d1%8f%20%d0%b2%d0%b5%d0%b1%20%d0%bf%d1%80%d0%b8%d0%bb%d0%be%d0%b6%d0%b5%d0%bd%d0%b8%d1%8f&url=http%3a%2f%2fgen1us2k.github.io%2f2016%2f03%2f31%2fdeploy%2f"
             onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
             <i class="fa fa-twitter"></i>
             <span class="hidden">Twitter</span>
         </a>
 
-        <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fgen1us2k.github.io%2f2016%2f03%2f31%2fdomains%2f"
+        <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fgen1us2k.github.io%2f2016%2f03%2f31%2fdeploy%2f"
             onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
             <i class="fa fa-facebook"></i>
             <span class="hidden">Facebook</span>
         </a>
 
-        <a class="icon-google-plus" href="https://plus.google.com/share?url=http%3a%2f%2fgen1us2k.github.io%2f2016%2f03%2f31%2fdomains%2f"
+        <a class="icon-google-plus" href="https://plus.google.com/share?url=http%3a%2f%2fgen1us2k.github.io%2f2016%2f03%2f31%2fdeploy%2f"
            onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
            <i class="fa fa-google-plus"></i>
             <span class="hidden">Google+</span>
@@ -190,9 +166,9 @@ if __name__ == '__main__':
         <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'gen1us2k';
-    var disqus_identifier = 'http:\/\/gen1us2k.github.io\/2016\/03\/31\/domains\/';
-    var disqus_title = 'Как мы домены мониторили';
-    var disqus_url = 'http:\/\/gen1us2k.github.io\/2016\/03\/31\/domains\/';
+    var disqus_identifier = 'http:\/\/gen1us2k.github.io\/2016\/03\/31\/deploy\/';
+    var disqus_title = 'Используем Git в качестве инструмента для деплоя веб приложения';
+    var disqus_url = 'http:\/\/gen1us2k.github.io\/2016\/03\/31\/deploy\/';
 
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
