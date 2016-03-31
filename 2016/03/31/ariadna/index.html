@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Ariadna. Зачем нужен еще один геокодер для ОСМ? &middot; Gen1us2k</title>
+        <meta name="description" content="О технологиях, бекендах, Go и жизни">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="generator" content="Hugo 0.15" />
+        <meta name="robots" content="index,follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="http://gen1us2k.github.io/css/normalize.css">
+        <link rel="stylesheet" href="http://gen1us2k.github.io/css/highlight.css">
+        <link rel="stylesheet" href="http://gen1us2k.github.io/css/style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        
+
+        <div id="wrapper">
+            <header class="site-header">
+                <div class="container">
+                    <div class="site-title-wrapper">
+                        
+                            <h1 class="site-title">
+                                <a title="Gen1us2k" href="http://gen1us2k.github.io/">Gen1us2k</a>
+                            </h1>
+                        
+                        <a class="button-square" href="http://gen1us2k.github.io/index.xml"><i class="fa fa-rss"></i></a>
+                        
+                            <a class="button-square button-social hint--top" data-hint="Twitter" title="Twitter" href="https://twitter.com/Gen1us2k">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Github" title="Github" href="https://github.com/Gen1us2k">
+                                <i class="fa fa-github-alt"></i>
+                            </a>
+                        
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="LinkedIn" title="LinkedIn" href="https://linkedin.com/in/andrew-minkin-700a2523/">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Google+" title="Google+" href="https://google.com/&#43;AndrewMinkinGen1us2k">
+                                <i class="fa fa-google-plus"></i>
+                            </a>
+                        
+                    </div>
+
+                    <ul class="site-nav">
+                        
+    <li class="site-nav-item">
+        <a title="Блог" href="http://gen1us2k.github.io/">Блог</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Projects" href="http://gen1us2k.github.io/project/">Projects</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Contact" href="http://gen1us2k.github.io/page/contact/">Contact</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="About" href="http://gen1us2k.github.io/page/about/">About</a>
+    </li>
+
+                    </ul>
+                </div>
+            </header>
+
+            <div id="container">
+
+
+<div class="container">
+    <article class="post-container" itemscope="" itemtype="http://schema.org/BlogPosting">
+        <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Ariadna. Зачем нужен еще один геокодер для ОСМ?</h1>
+    
+    <p class="post-date">
+        <span>Published <time datetime="2016-03-31" itemprop="datePublished">Thu, Mar 31, 2016</time></span>
+        <span>by</span>
+        <span itemscope="" itemprop="author" itemtype="http://schema.org/Person">
+            <span itemprop="name">
+                <a href="https://google.com/&#43;AndrewMinkinGen1us2k" itemprop="url" rel="author">Gen1us2k</a>
+            </span>
+        </span>
+    </p>
+</header>
+
+        <div class="post-content clearfix" itemprop="articleBody">
+    
+
+    
+
+<p>Всем привет!</p>
+
+<p>Совсем недавно я закончил делать геокодер для своих целей <a href="https://github.com/gen1us2k/ariadna">Ariadna</a></p>
+
+<p>В статье не будет ни строчки кода на Go.  Зато будет полное описание работы геокодера и проблем, с которыми я встречался. А код можете посмотреть на гитхабе.</p>
+
+<h3 id="предыстория:ef594d42b562dc51868faca891ac3a45">Предыстория</h3>
+
+<p>Я работаю в одной из бишкекских служб такси, что в Кыргызстане. Решили мы пооптимизировать нахождение координат по адресу для более оптимального распределения заказов.</p>
+
+<p>Чего у нас нет:</p>
+
+<ul>
+<li>Полной карты Яндекса, Гугла или 2Гис</li>
+<li>Доверия к GPS данным</li>
+</ul>
+
+<p>Что у нас есть:</p>
+
+<ul>
+<li>Очень разношерстные данные на входе</li>
+<li>Openstreetmap</li>
+<li>Своя накопленная база адресов с координатами</li>
+</ul>
+
+<h3 id="что-пользователи-могут-вводить:ef594d42b562dc51868faca891ac3a45">Что пользователи могут вводить?</h3>
+
+<p>Пользователи могут вводить адреса в разных форматах:</p>
+
+<ul>
+<li>Улица дом</li>
+<li>Перекресток</li>
+<li>Название заведения</li>
+<li>Название точки</li>
+<li>микрорайон дом</li>
+<li>микрорайон улица дом</li>
+</ul>
+
+<p>И таких вариантов  очень много, например
+Киевская 28
+Киевская Советская
+5-42
+5 микрорайон советская 42
+ЦУМ
+кафе у Ашота
+шлагбаум
+И так далее</p>
+
+<h3 id="постановка-задачи:ef594d42b562dc51868faca891ac3a45">Постановка задачи</h3>
+
+<p>Сделать геокодер, который бы умел принимать любые данные на вход и отдавать им координаты
+Язык поиска - только русский.</p>
+
+<h3 id="как-докатился-до-такой-жизни:ef594d42b562dc51868faca891ac3a45">Как докатился до такой жизни</h3>
+
+<p>Перед тем, как делать свой велосипед я решил поресерчить решения, которые уже есть.
+Были:</p>
+
+<ul>
+<li><a href="https://github.com/pelias/pelias">Pelias</a></li>
+<li><a href="https://github.com/twain47/Nominatim">Nominatim</a></li>
+<li><a href="https://photon.komoot.de/">Photon</a></li>
+</ul>
+
+<p>Чем не устраивал номинатим, который у нас был:</p>
+
+<ul>
+<li>Сложен сам по себе</li>
+<li>Сделан на php+с(Это не потому что пхп плохой, а потому что только для этого инструмента у нас стоит апач и пхп)</li>
+<li>Сложная логика в хранимых процедурах Postgresql</li>
+</ul>
+
+<p>Чем понравился Pelias:</p>
+
+<ul>
+<li>Может работать с многими источниками геоданных</li>
+<li>Поиск организован на ElasticSearch</li>
+</ul>
+
+<p>В итоге решил отказаться от всех трех геокодеров и сделать свой инструмент по нескольким причинам:</p>
+
+<ol>
+<li>Я хочу разобраться с данными в OSM и импортить только нужные для поиска</li>
+<li>Я могу обрабатывать геоданные перед занесением в индекс</li>
+<li>Мне не нравится жаваскрипт и node.js, отсюда и не желание делать поиск на основе пелиаса</li>
+</ol>
+
+<h3 id="проектирование:ef594d42b562dc51868faca891ac3a45">Проектирование</h3>
+
+<p>Был заложен следующий алгоритм:</p>
+
+<ol>
+<li>Сначала получаем геометрию по крупным населенным пунктам(города, столицы, деревни, жилые массивы)</li>
+<li>Выгружаем все возможные адреса и соотносим их к нужному жилому массиву, городу и другому населенному пункту, выставляя нужное значение</li>
+<li>Выгружаем все дороги</li>
+<li>Ищем пересечение дорог</li>
+<li>Кладем все в индекс</li>
+<li>Ищем</li>
+</ol>
+
+<p>Для реализации я выбрал Go, учитывая проекты типа <a href="https://github.com/pelias/pbf2json">pbf2json</a>, <a href="github.com/kellydunn/golang-geo">golang-geo</a> и многих других для обработки геоданных. Также хотелось покачать скилл именно в нем.</p>
+
+<h3 id="реализация:ef594d42b562dc51868faca891ac3a45">Реализация</h3>
+
+<p>С получением и парсингом данных с осм вроде разобрался. Для жилых массивов используем теги place=city,place=village,place=suburb,place=town,place=neighbourhood для фильтрации. Для получения адресов, зданий addr:street+addr:housenumber,amenity,shop,addr:housenumber
+Все дороги можно получить с помощью тега highway</p>
+
+<p>Встали сложности с поиском англоязычных названий на русском языке. Как пробовал это решить:</p>
+
+<ol>
+<li>Простая автоматическая транслитерация в русский. В итоге получалось абсурдной и не корректной. Пример конвертации данных был таким: City House -&gt; Цити Хоусе</li>
+<li>Давай попробуем преобразовывать так. Получать транскрипцию слова и ее уже транслитерировать. Получилось что-то вроде Adrenaline rush -&gt; Эрденалин Рэш. Сносно, но нужен русский акцент, типа адреналин раш.</li>
+<li>Подошел такой механизм. Автоматически транслитеризуем все данные, применяя словарь замен. Все-таки простая и тупая транслитерация работает сносно. Словарь наполнился в принципе быстро через несколько прогонов на данных.</li>
+</ol>
+
+<p>С этим разобрались к этому моменту мы уже получаем данные, которые:</p>
+
+<ol>
+<li>Нормализированы и приведены к русскому языку</li>
+<li>адреса приведены к формату Страна, город, село или поселок, микрорайон или жилой массив, улица, дом</li>
+</ol>
+
+<p>Следующая часть квеста - найти пересечения дорог. Сделал ее по быстрому и получил очень медленную реализацию, сложностью O(n^2). Как временный выход использую Postgres+postgis для нахождения пересечений, пока не нашел хорошего алгоритма для поиска пересечений.</p>
+
+<p>В итоге получился хороший парсер данных с осм, который кладет данные в ElasticSearch. Который получил простое название importer</p>
+
+<h3 id="автоматизируй-это:ef594d42b562dc51868faca891ac3a45">Автоматизируй это</h3>
+
+<p>Учитывая то, что постоянно выкачивать и создавать индексы в эластиксерче в скоре надоело, появился компонент updater. Появилась также автоматическая конфигурация в JSON формате.</p>
+
+<p>Процесс выкачивания файла и импорт его в elastic search автоматизировался. Плюс к этому появилась возможность обновлять данные в эластиксерче без даунтайма, благодаря алиасам.</p>
+
+<p>Как это работает:</p>
+
+<ol>
+<li>Updater качает файл</li>
+<li>Узнает текущую версию индекса с конфига</li>
+<li>Инкрементит версию и создает новый индекс</li>
+<li>Заполняет его данными</li>
+<li>Меняет алиасы</li>
+<li>Удаляет старый индекс</li>
+</ol>
+
+<p>Получил такие бенефиты от этого:</p>
+
+<ol>
+<li>Пишем конфиг</li>
+<li>Запускаем ./ariadna update</li>
+<li>Идем пить кофе</li>
+<li>Получаем готовый настроенный индекс.</li>
+</ol>
+
+<p>Также для удобства прикрутил простой вебинтерфейс с картой и возможностью поиска.</p>
+
+<h3 id="автоматическое-пополнение-данными:ef594d42b562dc51868faca891ac3a45">Автоматическое пополнение данными</h3>
+
+<p>Помимо ОСМ у нас еще есть много водителей и операторы, которые забивают заказы.
+Соотвественно у нас есть имя и координаты
+Сделана такая схема:</p>
+
+<ol>
+<li>Треки водителей хранятся в индексе drivers_data</li>
+<li>Данные с ОСМ хранятся в индексе osm_data</li>
+<li>Объединены они через алиас addresses по которому и происходит поиск адресов</li>
+</ol>
+
+<p>Данные от водителей заносятся, если у нас погрешность в определенных координатах больше, чем 200 метров.</p>
+
+<h3 id="итого:ef594d42b562dc51868faca891ac3a45">Итого</h3>
+
+<p>Получился геокодер который умеет:</p>
+
+<ol>
+<li>Искать координаты по синонимам. например ШВК - ШампанВинКомбинат</li>
+<li>Умеет искать адреса в определенном радиусе (например для себя с сделал поиск адресов в 30 км от центра города)</li>
+<li>Искать по названию заведений (кафе у Ашота например)</li>
+<li>Искать перекрестки</li>
+<li>Искать адреса в микрорайонах и жил массивах</li>
+<li>Делать реверс геокодинг</li>
+<li>Автоматически пополнятся новыми данными от водителей</li>
+</ol>
+
+<p>Состоит из трех компонентов:</p>
+
+<ol>
+<li>Импортер данных</li>
+<li>Апдейтер данных</li>
+<li>Веб интерфейс</li>
+</ol>
+
+<h3 id="минусы:ef594d42b562dc51868faca891ac3a45">Минусы</h3>
+
+<ol>
+<li>Протестирован только для Кыргызстана</li>
+<li>Нет демки</li>
+<li>Нет поддержки всех схем адресации</li>
+</ol>
+
+<p>Поэтому надеюсь кто-нибудь поможет его допилить и для хорошего поиска по другим странам и городам.</p>
+
+<p>Если кому-то проект показался интересным, то я не против  любой критики, пул реквестов, issues на гитхабе и фидбека в целом.</p>
+
+</div>
+
+        <footer class="post-footer clearfix">
+    
+
+    <div class="share">
+        <a class="icon-twitter" href="http://twitter.com/share?text=Ariadna.%20%d0%97%d0%b0%d1%87%d0%b5%d0%bc%20%d0%bd%d1%83%d0%b6%d0%b5%d0%bd%20%d0%b5%d1%89%d0%b5%20%d0%be%d0%b4%d0%b8%d0%bd%20%d0%b3%d0%b5%d0%be%d0%ba%d0%be%d0%b4%d0%b5%d1%80%20%d0%b4%d0%bb%d1%8f%20%d0%9e%d0%a1%d0%9c%3f&url=http%3a%2f%2fgen1us2k.github.io%2f2016%2f03%2f31%2fariadna%2f"
+            onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+            <i class="fa fa-twitter"></i>
+            <span class="hidden">Twitter</span>
+        </a>
+
+        <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fgen1us2k.github.io%2f2016%2f03%2f31%2fariadna%2f"
+            onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+            <i class="fa fa-facebook"></i>
+            <span class="hidden">Facebook</span>
+        </a>
+
+        <a class="icon-google-plus" href="https://plus.google.com/share?url=http%3a%2f%2fgen1us2k.github.io%2f2016%2f03%2f31%2fariadna%2f"
+           onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+           <i class="fa fa-google-plus"></i>
+            <span class="hidden">Google+</span>
+        </a>
+    </div>
+</footer>
+
+        
+    <div class="comments">
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'gen1us2k';
+    var disqus_identifier = 'http:\/\/gen1us2k.github.io\/2016\/03\/31\/ariadna\/';
+    var disqus_title = 'Ariadna. Зачем нужен еще один геокодер для ОСМ?';
+    var disqus_url = 'http:\/\/gen1us2k.github.io\/2016\/03\/31\/ariadna\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+
+    </article>
+</div>
+
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="site-title-wrapper">
+                    <h1 class="site-title">
+                        <a title="Gen1us2k" href="http://gen1us2k.github.io/">Gen1us2k</a>
+                    </h1>
+                    <a class="button-square button-jump-top js-jump-top" href="#">
+                        <i class="fa fa-angle-up"></i>
+                    </a>
+                </div>
+
+                <p class="footer-copyright">
+                    <span>&copy; 2016 / Powered by <a href="http://gohugo.io/">Hugo</a></span>
+                </p>
+                <p class="footer-copyright">
+                    <span><a href="https://github.com/roryg/ghostwriter">Ghostwriter theme</a> By <a href="http://jollygoodthemes.com">JollyGoodThemes</a></span>
+                    <span>/ <a href="https://github.com/jbub/ghostwriter">Ported</a> to Hugo By <a href="https://github.com/jbub">jbub</a></span>
+                </p>
+            </div>
+        </footer>
+
+        <script src="http://gen1us2k.github.io/js/jquery-1.11.3.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+        <script src="http://gen1us2k.github.io/js/jquery.fitvids.js"></script>
+        <script src="http://gen1us2k.github.io/js/scripts.js"></script>
+    </body>
+</html>
+

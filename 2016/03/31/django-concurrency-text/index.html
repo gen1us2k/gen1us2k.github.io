@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Модели Django и решение проблем с конкурентным доступом к данным &middot; Gen1us2k</title>
+        <meta name="description" content="О технологиях, бекендах, Go и жизни">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="generator" content="Hugo 0.15" />
+        <meta name="robots" content="index,follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="http://gen1us2k.github.io/css/normalize.css">
+        <link rel="stylesheet" href="http://gen1us2k.github.io/css/highlight.css">
+        <link rel="stylesheet" href="http://gen1us2k.github.io/css/style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        
+
+        <div id="wrapper">
+            <header class="site-header">
+                <div class="container">
+                    <div class="site-title-wrapper">
+                        
+                            <h1 class="site-title">
+                                <a title="Gen1us2k" href="http://gen1us2k.github.io/">Gen1us2k</a>
+                            </h1>
+                        
+                        <a class="button-square" href="http://gen1us2k.github.io/index.xml"><i class="fa fa-rss"></i></a>
+                        
+                            <a class="button-square button-social hint--top" data-hint="Twitter" title="Twitter" href="https://twitter.com/Gen1us2k">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Github" title="Github" href="https://github.com/Gen1us2k">
+                                <i class="fa fa-github-alt"></i>
+                            </a>
+                        
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="LinkedIn" title="LinkedIn" href="https://linkedin.com/in/andrew-minkin-700a2523/">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Google+" title="Google+" href="https://google.com/&#43;AndrewMinkinGen1us2k">
+                                <i class="fa fa-google-plus"></i>
+                            </a>
+                        
+                    </div>
+
+                    <ul class="site-nav">
+                        
+    <li class="site-nav-item">
+        <a title="Блог" href="http://gen1us2k.github.io/">Блог</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Projects" href="http://gen1us2k.github.io/project/">Projects</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Contact" href="http://gen1us2k.github.io/page/contact/">Contact</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="About" href="http://gen1us2k.github.io/page/about/">About</a>
+    </li>
+
+                    </ul>
+                </div>
+            </header>
+
+            <div id="container">
+
+
+<div class="container">
+    <article class="post-container" itemscope="" itemtype="http://schema.org/BlogPosting">
+        <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Модели Django и решение проблем с конкурентным доступом к данным</h1>
+    
+    <p class="post-date">
+        <span>Published <time datetime="2016-03-31" itemprop="datePublished">Thu, Mar 31, 2016</time></span>
+        <span>by</span>
+        <span itemscope="" itemprop="author" itemtype="http://schema.org/Person">
+            <span itemprop="name">
+                <a href="https://google.com/&#43;AndrewMinkinGen1us2k" itemprop="url" rel="author">Gen1us2k</a>
+            </span>
+        </span>
+    </p>
+</header>
+
+        <div class="post-content clearfix" itemprop="articleBody">
+    
+
+    
+
+<p>Всем привет!</p>
+
+<h3 id="стартовые-данные:e2f056526bbd4a54e575d3c82eb65050">Стартовые данные</h3>
+
+<p>2 сервера с Django, запущенные под uWSGI
+1-2k запросов в секунду
+Проект с движением денег внутри</p>
+
+<h3 id="что-дальше:e2f056526bbd4a54e575d3c82eb65050">Что дальше?</h3>
+
+<p>Допустим мы реализуем метод обновления баланса для пользователя. И этот метод выглядит так:</p>
+
+<pre><code>class Profile(models.Model):
+...
+    def update_balance(self, balance):
+        self.balance += balance
+        self.save()
+</code></pre>
+
+<p>В этом случае, если нам придут два одновременных запроса на обновление баланса, то баланс обновит только второй запрос, потому что последний запрос вытеснил первый и взял старые данные.</p>
+
+<p>На этом этапе на помощь нам приходит метод <code>F</code> в связке с <code>.update()</code>
+<code>F()</code> возвращает нам значение из базы в актуальном состоянии. и предыдущий участок можно записать так</p>
+
+<pre><code>class Profile(models.Model):
+...
+    def update_balance(self, balance):
+        Profile.objects.\
+            filter(pk=self.pk)\
+           .update(balance=F('balance') + balance)
+</code></pre>
+
+<p>В этом случае мы всегда получаем актуальное значение поля и некоторые скажут, что этот способ решает нам проблему, но это не так. В этом случае, хоть и реализовано все правильно, как мы считаем, но проблему это не решает.</p>
+
+<p>В этом случае приходит к нам на помощь транзакции на уровне БД.</p>
+
+<h3 id="что-это-такое-транзакции-и-как-это-использовать:e2f056526bbd4a54e575d3c82eb65050">Что это такое транзакции и как это использовать?</h3>
+
+<p>Начнем с того, что в Django 1.4.x и 1.5.x можно включить Transaction Middleware. В Django 1.6+ ее заменили на константу ATOMIC_REQUESTS, которую можно включить к каждой БД использующейся в проекте.</p>
+
+<p>Работают они следующим образом. Когда к нам пришел запрос и перед тем как передать этот запрос на обработку во view Django открывает транзакцию. Если запрос был отработан без исключений, то делается commit в БД или rollback, если выскочило исключение.</p>
+
+<p>Разница между <code>ATOMIC_REQUESTS</code> и Middleware в том, что Middleware включается для всего проекта, а ATOMIC_REQUESTS можно использовать для одной или нескольких БД.</p>
+
+<p>Минус использования этого подхода в том, что создается оверхед на базу данных.
+В этом случае нам на помощь приходит ручное управление транзакциями.</p>
+
+<h3 id="ручное-управление-транзакциями:e2f056526bbd4a54e575d3c82eb65050">Ручное управление транзакциями</h3>
+
+<p>Django предоставляет множество вариантов работы с помощью модуля django.db.transaction</p>
+
+<p>Рассмотрим один из возможных способов ручного управления — это transaction.atomic</p>
+
+<p>transaction.atomic является и методом и декоратором и используется только для view методов.</p>
+
+<p>Обезопасить покупку товара можно, обернув view в декоратор. Например</p>
+
+<pre><code>from django.db import transaction
+...
+@transaction.atomic
+def buy_something(request):
+    ....
+    request.user.update_balance(money)
+    return render(request, template, data)
+</code></pre>
+
+<p>В этом случае мы включили атомарность транзакции для покупки товара. Всю ответственность за целостность данных переложили на БД и атомарность решает нашу проблему.</p>
+
+<p>Еще в связке с атомарными транзакциями можно использовать <code>select_for_update</code> метод.
+В этом случае изменяемая строка будет блокироваться на изменение до тех пор, пока не вызовется update.
+Наш метод обновления баланса можно записать теперь так:</p>
+
+<pre><code>class Profile(models.Model):
+...
+    def update_balance(self, balance):
+        Profile.objects.select_for_update().\
+            filter(pk=self.pk)\
+           .update(balance=F('balance') + balance)
+</code></pre>
+
+<h3 id="выводы:e2f056526bbd4a54e575d3c82eb65050">Выводы:</h3>
+
+<p>Атомарность приходит на помощь
+Делайте атомарными только критически важные участки кода
+Используйте select for update для блокировки данных во время изменения
+По возможности старайтесь делать транзакции как можно короче, чтобы не блокировать работу с данными в БД.</p>
+
+<p>Дополнительно: про уровни транзакций в MySQL рассказали <a href="https://habrahabr.ru/post/135217/">«MySQL: уровни изоляции транзакций».</a></p>
+
+</div>
+
+        <footer class="post-footer clearfix">
+    
+
+    <div class="share">
+        <a class="icon-twitter" href="http://twitter.com/share?text=%d0%9c%d0%be%d0%b4%d0%b5%d0%bb%d0%b8%20Django%20%d0%b8%20%d1%80%d0%b5%d1%88%d0%b5%d0%bd%d0%b8%d0%b5%20%d0%bf%d1%80%d0%be%d0%b1%d0%bb%d0%b5%d0%bc%20%d1%81%20%d0%ba%d0%be%d0%bd%d0%ba%d1%83%d1%80%d0%b5%d0%bd%d1%82%d0%bd%d1%8b%d0%bc%20%d0%b4%d0%be%d1%81%d1%82%d1%83%d0%bf%d0%be%d0%bc%20%d0%ba%20%d0%b4%d0%b0%d0%bd%d0%bd%d1%8b%d0%bc&url=http%3a%2f%2fgen1us2k.github.io%2f2016%2f03%2f31%2fdjango-concurrency-text%2f"
+            onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+            <i class="fa fa-twitter"></i>
+            <span class="hidden">Twitter</span>
+        </a>
+
+        <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fgen1us2k.github.io%2f2016%2f03%2f31%2fdjango-concurrency-text%2f"
+            onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+            <i class="fa fa-facebook"></i>
+            <span class="hidden">Facebook</span>
+        </a>
+
+        <a class="icon-google-plus" href="https://plus.google.com/share?url=http%3a%2f%2fgen1us2k.github.io%2f2016%2f03%2f31%2fdjango-concurrency-text%2f"
+           onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+           <i class="fa fa-google-plus"></i>
+            <span class="hidden">Google+</span>
+        </a>
+    </div>
+</footer>
+
+        
+    <div class="comments">
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'gen1us2k';
+    var disqus_identifier = 'http:\/\/gen1us2k.github.io\/2016\/03\/31\/django-concurrency-text\/';
+    var disqus_title = 'Модели Django и решение проблем с конкурентным доступом к данным';
+    var disqus_url = 'http:\/\/gen1us2k.github.io\/2016\/03\/31\/django-concurrency-text\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+
+    </article>
+</div>
+
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="site-title-wrapper">
+                    <h1 class="site-title">
+                        <a title="Gen1us2k" href="http://gen1us2k.github.io/">Gen1us2k</a>
+                    </h1>
+                    <a class="button-square button-jump-top js-jump-top" href="#">
+                        <i class="fa fa-angle-up"></i>
+                    </a>
+                </div>
+
+                <p class="footer-copyright">
+                    <span>&copy; 2016 / Powered by <a href="http://gohugo.io/">Hugo</a></span>
+                </p>
+                <p class="footer-copyright">
+                    <span><a href="https://github.com/roryg/ghostwriter">Ghostwriter theme</a> By <a href="http://jollygoodthemes.com">JollyGoodThemes</a></span>
+                    <span>/ <a href="https://github.com/jbub/ghostwriter">Ported</a> to Hugo By <a href="https://github.com/jbub">jbub</a></span>
+                </p>
+            </div>
+        </footer>
+
+        <script src="http://gen1us2k.github.io/js/jquery-1.11.3.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+        <script src="http://gen1us2k.github.io/js/jquery.fitvids.js"></script>
+        <script src="http://gen1us2k.github.io/js/scripts.js"></script>
+    </body>
+</html>
+

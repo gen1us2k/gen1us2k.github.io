@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pages on Gen1us2k</title>
+    <link>http://gen1us2k.github.io/page/</link>
+    <description>Recent content in Pages on Gen1us2k</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Gen1us2k</copyright>
+    <lastBuildDate>Thu, 31 Mar 2016 19:51:42 +0600</lastBuildDate>
+    <atom:link href="http://gen1us2k.github.io/page/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Сontact</title>
+      <link>http://gen1us2k.github.io/page/contact/</link>
+      <pubDate>Thu, 31 Mar 2016 19:51:42 +0600</pubDate>
+      
+      <guid>http://gen1us2k.github.io/page/contact/</guid>
+      <description>&lt;p&gt;Nothing to do here.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Обо мне</title>
+      <link>http://gen1us2k.github.io/page/about/</link>
+      <pubDate>Thu, 31 Mar 2016 19:50:32 +0600</pubDate>
+      
+      <guid>http://gen1us2k.github.io/page/about/</guid>
+      <description>&lt;p&gt;Работаю в Namba Taxi. Пишу код на Python/Go. Разбираюсь с интересными задачами.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
