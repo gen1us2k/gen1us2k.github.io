@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Concurrency on Gen1us2k</title>
+    <link>http://gen1us2k.github.io/tags/concurrency/</link>
+    <description>Recent content in Concurrency on Gen1us2k</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Gen1us2k</copyright>
+    <lastBuildDate>Thu, 31 Mar 2016 19:41:40 +0600</lastBuildDate>
+    <atom:link href="http://gen1us2k.github.io/tags/concurrency/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Модели Django и решение проблем с конкурентным доступом к данным</title>
+      <link>http://gen1us2k.github.io/2016/03/31/django-concurrency-text/</link>
+      <pubDate>Thu, 31 Mar 2016 19:41:40 +0600</pubDate>
+      
+      <guid>http://gen1us2k.github.io/2016/03/31/django-concurrency-text/</guid>
+      <description>
+
+&lt;p&gt;Всем привет!&lt;/p&gt;
+
+&lt;h3 id=&#34;стартовые-данные:e2f056526bbd4a54e575d3c82eb65050&#34;&gt;Стартовые данные&lt;/h3&gt;
+
+&lt;p&gt;2 сервера с Django, запущенные под uWSGI
+1-2k запросов в секунду
+Проект с движением денег внутри&lt;/p&gt;
+
+&lt;h3 id=&#34;что-дальше:e2f056526bbd4a54e575d3c82eb65050&#34;&gt;Что дальше?&lt;/h3&gt;
+
+&lt;p&gt;Допустим мы реализуем метод обновления баланса для пользователя. И этот метод выглядит так:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;class Profile(models.Model):
+...
+    def update_balance(self, balance):
+        self.balance += balance
+        self.save()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;В этом случае, если нам придут два одновременных запроса на обновление баланса, то баланс обновит только второй запрос, потому что последний запрос вытеснил первый и взял старые данные.&lt;/p&gt;
+
+&lt;p&gt;На этом этапе на помощь нам приходит метод &lt;code&gt;F&lt;/code&gt; в связке с &lt;code&gt;.update()&lt;/code&gt;
+&lt;code&gt;F()&lt;/code&gt; возвращает нам значение из базы в актуальном состоянии. и предыдущий участок можно записать так&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;class Profile(models.Model):
+...
+    def update_balance(self, balance):
+        Profile.objects.\
+            filter(pk=self.pk)\
+           .update(balance=F(&#39;balance&#39;) + balance)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;В этом случае мы всегда получаем актуальное значение поля и некоторые скажут, что этот способ решает нам проблему, но это не так. В этом случае, хоть и реализовано все правильно, как мы считаем, но проблему это не решает.&lt;/p&gt;
+
+&lt;p&gt;В этом случае приходит к нам на помощь транзакции на уровне БД.&lt;/p&gt;
+
+&lt;h3 id=&#34;что-это-такое-транзакции-и-как-это-использовать:e2f056526bbd4a54e575d3c82eb65050&#34;&gt;Что это такое транзакции и как это использовать?&lt;/h3&gt;
+
+&lt;p&gt;Начнем с того, что в Django 1.4.x и 1.5.x можно включить Transaction Middleware. В Django 1.6+ ее заменили на константу ATOMIC_REQUESTS, которую можно включить к каждой БД использующейся в проекте.&lt;/p&gt;
+
+&lt;p&gt;Работают они следующим образом. Когда к нам пришел запрос и перед тем как передать этот запрос на обработку во view Django открывает транзакцию. Если запрос был отработан без исключений, то делается commit в БД или rollback, если выскочило исключение.&lt;/p&gt;
+
+&lt;p&gt;Разница между &lt;code&gt;ATOMIC_REQUESTS&lt;/code&gt; и Middleware в том, что Middleware включается для всего проекта, а ATOMIC_REQUESTS можно использовать для одной или нескольких БД.&lt;/p&gt;
+
+&lt;p&gt;Минус использования этого подхода в том, что создается оверхед на базу данных.
+В этом случае нам на помощь приходит ручное управление транзакциями.&lt;/p&gt;
+
+&lt;h3 id=&#34;ручное-управление-транзакциями:e2f056526bbd4a54e575d3c82eb65050&#34;&gt;Ручное управление транзакциями&lt;/h3&gt;
+
+&lt;p&gt;Django предоставляет множество вариантов работы с помощью модуля django.db.transaction&lt;/p&gt;
+
+&lt;p&gt;Рассмотрим один из возможных способов ручного управления — это transaction.atomic&lt;/p&gt;
+
+&lt;p&gt;transaction.atomic является и методом и декоратором и используется только для view методов.&lt;/p&gt;
+
+&lt;p&gt;Обезопасить покупку товара можно, обернув view в декоратор. Например&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;from django.db import transaction
+...
+@transaction.atomic
+def buy_something(request):
+    ....
+    request.user.update_balance(money)
+    return render(request, template, data)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;В этом случае мы включили атомарность транзакции для покупки товара. Всю ответственность за целостность данных переложили на БД и атомарность решает нашу проблему.&lt;/p&gt;
+
+&lt;p&gt;Еще в связке с атомарными транзакциями можно использовать &lt;code&gt;select_for_update&lt;/code&gt; метод.
+В этом случае изменяемая строка будет блокироваться на изменение до тех пор, пока не вызовется update.
+Наш метод обновления баланса можно записать теперь так:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;class Profile(models.Model):
+...
+    def update_balance(self, balance):
+        Profile.objects.select_for_update().\
+            filter(pk=self.pk)\
+           .update(balance=F(&#39;balance&#39;) + balance)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;выводы:e2f056526bbd4a54e575d3c82eb65050&#34;&gt;Выводы:&lt;/h3&gt;
+
+&lt;p&gt;Атомарность приходит на помощь
+Делайте атомарными только критически важные участки кода
+Используйте select for update для блокировки данных во время изменения
+По возможности старайтесь делать транзакции как можно короче, чтобы не блокировать работу с данными в БД.&lt;/p&gt;
+
+&lt;p&gt;Дополнительно: про уровни транзакций в MySQL рассказали &lt;a href=&#34;https://habrahabr.ru/post/135217/&#34;&gt;«MySQL: уровни изоляции транзакций».&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Решение конкурентного доступа к данным в Django</title>
+      <link>http://gen1us2k.github.io/2016/03/31/django-concurrency/</link>
+      <pubDate>Thu, 31 Mar 2016 18:33:21 +0600</pubDate>
+      
+      <guid>http://gen1us2k.github.io/2016/03/31/django-concurrency/</guid>
+      <description>&lt;p&gt;Рассказывал недавно о том, как писать код в джанговских моделях без рейс кондишнов и конкурентного доступа к данным.&lt;/p&gt;
+
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;//www.youtube.com/embed/H2vzpGQ57r0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
+ &lt;/div&gt;
+
+</description>
+    </item>
+    
+  </channel>
+</rss>
