@@ -7,8 +7,26 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Gen1us2k</copyright>
-    <lastBuildDate>Mon, 16 May 2016 20:45:51 +0600</lastBuildDate>
+    <lastBuildDate>Tue, 17 May 2016 00:21:43 +0600</lastBuildDate>
     <atom:link href="http://gen1us2k.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Проекты</title>
+      <link>http://gen1us2k.github.io/project/</link>
+      <pubDate>Tue, 17 May 2016 00:21:43 +0600</pubDate>
+      
+      <guid>http://gen1us2k.github.io/project/</guid>
+      <description>&lt;p&gt;Все проекты доступны на &lt;a href=&#34;https://github.com/gen1us2k&#34;&gt;Github&lt;/a&gt; . В основном это всякие мелкие пет-прожекты.
+Наиболее интересные проекты:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/meshbird/meshbird&#34;&gt;MeshBird&lt;/a&gt; - overlay сеть для чего угодно под Linux/FreeBSD/MacOs&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://gen1us2k.com/gen1us2k/ariadna&#34;&gt;Ariadna&lt;/a&gt; - геокодер, который отлично ищет адреса в Бишкеке. Демок открытых нет :(&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/gen1us2k/python-whois&#34;&gt;Python-whois&lt;/a&gt; - либа для питона, для проверки статуса домена.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/gen1us2k/django-osmp&#34;&gt;Django-OSMP&lt;/a&gt; - прием платежей по OSMP протоколу для Django. По хорошему нужно переписать его и написать тесты.&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
     
     <item>
       <title>О стартапах, программистах, задачах и бизнесе.</title>
@@ -458,7 +476,13 @@
       <pubDate>Thu, 31 Mar 2016 19:51:42 +0600</pubDate>
       
       <guid>http://gen1us2k.github.io/page/contact/</guid>
-      <description>&lt;p&gt;Nothing to do here.&lt;/p&gt;
+      <description>&lt;p&gt;Для связи со мной вы можете написать мне на почту minkin dot andrew at gmail dot com. Либо в одной из следующих сетей:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Gen1us2k&#34;&gt;Github&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.facebook.com/Gen1us2k&#34;&gt;Facebook&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.linkedin.com/in/andrew-minkin-700a2523&#34;&gt;Linkedin&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     </item>
     
@@ -468,7 +492,7 @@
       <pubDate>Thu, 31 Mar 2016 19:50:32 +0600</pubDate>
       
       <guid>http://gen1us2k.github.io/page/about/</guid>
-      <description>&lt;p&gt;Работаю в Namba Taxi. Пишу код на Python/Go. Разбираюсь с интересными задачами.&lt;/p&gt;
+      <description>&lt;p&gt;Тимлид в Namba Taxi. Пишу код на Python/Go. Разбираюсь с интересными задачами.&lt;/p&gt;
 </description>
     </item>
     
