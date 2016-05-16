@@ -11,7 +11,7 @@
     <atom:link href="http://gen1us2k.github.io/tags/microservices/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>microservices</title>
+      <title>Some info about microservices  </title>
       <link>http://gen1us2k.github.io/2016/04/09/microservices/</link>
       <pubDate>Sat, 09 Apr 2016 22:57:20 +0600</pubDate>
       
@@ -21,7 +21,7 @@
 
 &lt;p&gt;&lt;a href=&#34;http://nordicapis.com/writing-microservices-in-go/&#34;&gt;Writing microservices in go&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://nordicapis.com/writing-microservices-in-go-part-ii-when-not-to-use-go/&#34;&gt;Writing microservices in go parth 2&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://nordicapis.com/writing-microservices-in-go-part-ii-when-not-to-use-go/&#34;&gt;Writing microservices in go path 2&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://abdullin.com/golang/&#34;&gt;Go good parts&lt;/a&gt;&lt;/p&gt;
 
@@ -32,6 +32,20 @@
 &lt;p&gt;&lt;a href=&#34;https://developers.google.com/protocol-buffers/docs/proto#specifying-field-rules&#34;&gt;Protobuf&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=yszygk1cpEc&#34;&gt;Advanced testing with Go&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=wgdBVIX9ifA&#34;&gt;Microservices • Martin Fowler&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://labs.unacast.com/2016/03/10/monitoring-microservices-synthetic-transactions-in-go/&#34;&gt;Monitoring microservices with Synthetic Transactions in Go&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://martinfowler.com/articles/microservice-trade-offs.html&#34;&gt;Microservice Trade-Offs&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.infoq.com/presentations/7-sins-microservices&#34;&gt;The Seven Deadly Sins of Microservices&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.nginx.com/blog/refactoring-a-monolith-into-microservices/&#34;&gt;Refactoring a Monolith into Microservices&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=f40EybJwgBo&#34;&gt;How Microservices fail and what to do about it&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://nordicapis.com/how-to-control-user-identity-within-microservices/&#34;&gt;How to control user identity within microservices&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
