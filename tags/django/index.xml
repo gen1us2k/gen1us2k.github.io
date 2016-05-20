@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Django on Gen1us2k</title>
-    <link>http://gen1us2k.github.io/tags/django/</link>
+    <link>http://gen1us2k.com/tags/django/</link>
     <description>Recent content in Django on Gen1us2k</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Gen1us2k</copyright>
     <lastBuildDate>Thu, 31 Mar 2016 19:41:40 +0600</lastBuildDate>
-    <atom:link href="http://gen1us2k.github.io/tags/django/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://gen1us2k.com/tags/django/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Модели Django и решение проблем с конкурентным доступом к данным</title>
-      <link>http://gen1us2k.github.io/2016/03/31/django-concurrency-text/</link>
+      <link>http://gen1us2k.com/2016/03/31/django-concurrency-text/</link>
       <pubDate>Thu, 31 Mar 2016 19:41:40 +0600</pubDate>
       
-      <guid>http://gen1us2k.github.io/2016/03/31/django-concurrency-text/</guid>
+      <guid>http://gen1us2k.com/2016/03/31/django-concurrency-text/</guid>
       <description>
 
 &lt;p&gt;Всем привет!&lt;/p&gt;
@@ -111,10 +111,10 @@ def buy_something(request):
     
     <item>
       <title>Решение конкурентного доступа к данным в Django</title>
-      <link>http://gen1us2k.github.io/2016/03/31/django-concurrency/</link>
+      <link>http://gen1us2k.com/2016/03/31/django-concurrency/</link>
       <pubDate>Thu, 31 Mar 2016 18:33:21 +0600</pubDate>
       
-      <guid>http://gen1us2k.github.io/2016/03/31/django-concurrency/</guid>
+      <guid>http://gen1us2k.com/2016/03/31/django-concurrency/</guid>
       <description>&lt;p&gt;Рассказывал недавно о том, как писать код в джанговских моделях без рейс кондишнов и конкурентного доступа к данным.&lt;/p&gt;
 
 

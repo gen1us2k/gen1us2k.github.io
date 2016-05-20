@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Gen1us2k</title>
-    <link>http://gen1us2k.github.io/</link>
+    <link>http://gen1us2k.com/</link>
     <description>Recent content on Gen1us2k</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Gen1us2k</copyright>
     <lastBuildDate>Tue, 17 May 2016 00:21:43 +0600</lastBuildDate>
-    <atom:link href="http://gen1us2k.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://gen1us2k.com/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Проекты</title>
-      <link>http://gen1us2k.github.io/project/</link>
+      <link>http://gen1us2k.com/project/</link>
       <pubDate>Tue, 17 May 2016 00:21:43 +0600</pubDate>
       
-      <guid>http://gen1us2k.github.io/project/</guid>
+      <guid>http://gen1us2k.com/project/</guid>
       <description>&lt;p&gt;Все проекты доступны на &lt;a href=&#34;https://github.com/gen1us2k&#34;&gt;Github&lt;/a&gt; . В основном это всякие мелкие пет-прожекты.
 Наиболее интересные проекты:&lt;/p&gt;
 
@@ -30,10 +30,10 @@
     
     <item>
       <title>Коммуникация с программистами. Как практики стартапов могут помочь ставить задачи.</title>
-      <link>http://gen1us2k.github.io/2016/05/16/how_to_create_tasks/</link>
+      <link>http://gen1us2k.com/2016/05/16/how_to_create_tasks/</link>
       <pubDate>Mon, 16 May 2016 20:45:51 +0600</pubDate>
       
-      <guid>http://gen1us2k.github.io/2016/05/16/how_to_create_tasks/</guid>
+      <guid>http://gen1us2k.com/2016/05/16/how_to_create_tasks/</guid>
       <description>
 
 &lt;blockquote&gt;
@@ -150,10 +150,10 @@
     
     <item>
       <title>Как научиться программировать?</title>
-      <link>http://gen1us2k.github.io/2016/05/16/how_to_learn_programming/</link>
+      <link>http://gen1us2k.com/2016/05/16/how_to_learn_programming/</link>
       <pubDate>Mon, 16 May 2016 16:18:21 +0600</pubDate>
       
-      <guid>http://gen1us2k.github.io/2016/05/16/how_to_learn_programming/</guid>
+      <guid>http://gen1us2k.com/2016/05/16/how_to_learn_programming/</guid>
       <description>
 
 &lt;p&gt;Привет всем. Учитывая то, что я хочу помогать новичкам, но новичков много и каждый раз, с каждым новым новичком приходиться писать один и тот же текст, который описывает по сути все одно и тоже, то пора вынести его в один блог-пост.&lt;/p&gt;
@@ -239,10 +239,10 @@
     
     <item>
       <title>Some info about microservices  </title>
-      <link>http://gen1us2k.github.io/2016/04/09/microservices/</link>
+      <link>http://gen1us2k.com/2016/04/09/microservices/</link>
       <pubDate>Sat, 09 Apr 2016 22:57:20 +0600</pubDate>
       
-      <guid>http://gen1us2k.github.io/2016/04/09/microservices/</guid>
+      <guid>http://gen1us2k.com/2016/04/09/microservices/</guid>
       <description>&lt;p&gt;Пост, больше для того, чтобы сохранить ссылки себе.
 Много интересного материала о микросервисах.&lt;/p&gt;
 
@@ -278,10 +278,10 @@
     
     <item>
       <title>С чего начать изучать Go?</title>
-      <link>http://gen1us2k.github.io/2016/04/01/golang/</link>
+      <link>http://gen1us2k.com/2016/04/01/golang/</link>
       <pubDate>Fri, 01 Apr 2016 21:39:43 +0600</pubDate>
       
-      <guid>http://gen1us2k.github.io/2016/04/01/golang/</guid>
+      <guid>http://gen1us2k.com/2016/04/01/golang/</guid>
       <description>
 
 &lt;p&gt;Привет всем!
@@ -320,10 +320,10 @@
     
     <item>
       <title>Тупняк - как чума 21 века</title>
-      <link>http://gen1us2k.github.io/2016/03/31/plague/</link>
+      <link>http://gen1us2k.com/2016/03/31/plague/</link>
       <pubDate>Thu, 31 Mar 2016 20:10:50 +0600</pubDate>
       
-      <guid>http://gen1us2k.github.io/2016/03/31/plague/</guid>
+      <guid>http://gen1us2k.com/2016/03/31/plague/</guid>
       <description>&lt;p&gt;Очень полезный доклад о личной эффективности. Он фишку сечет и информацию доносит очень хорошо.&lt;/p&gt;
 
 &lt;p&gt;Вам знакома ситуация, когда вы зашиваетесь? Когда куча тасков в issue трекере, когда куча не отвеченных емейлов? Тогда это видео вам будет полезно к просмотру&lt;/p&gt;
@@ -338,10 +338,10 @@
     
     <item>
       <title>Как я проходил собеседование в Яндекс</title>
-      <link>http://gen1us2k.github.io/2016/03/31/yandex/</link>
+      <link>http://gen1us2k.com/2016/03/31/yandex/</link>
       <pubDate>Thu, 31 Mar 2016 19:55:34 +0600</pubDate>
       
-      <guid>http://gen1us2k.github.io/2016/03/31/yandex/</guid>
+      <guid>http://gen1us2k.com/2016/03/31/yandex/</guid>
       <description>
 
 &lt;h3 id=&#34;как-все-начиналось:c31a51a708fa01c7bfe111687ae6852b&#34;&gt;Как все начиналось&lt;/h3&gt;
@@ -472,10 +472,10 @@
     
     <item>
       <title>Сontact</title>
-      <link>http://gen1us2k.github.io/page/contact/</link>
+      <link>http://gen1us2k.com/page/contact/</link>
       <pubDate>Thu, 31 Mar 2016 19:51:42 +0600</pubDate>
       
-      <guid>http://gen1us2k.github.io/page/contact/</guid>
+      <guid>http://gen1us2k.com/page/contact/</guid>
       <description>&lt;p&gt;Для связи со мной вы можете написать мне на почту minkin dot andrew at gmail dot com. Либо в одной из следующих сетей:&lt;/p&gt;
 
 &lt;ol&gt;
@@ -488,20 +488,20 @@
     
     <item>
       <title>Обо мне</title>
-      <link>http://gen1us2k.github.io/page/about/</link>
+      <link>http://gen1us2k.com/page/about/</link>
       <pubDate>Thu, 31 Mar 2016 19:50:32 +0600</pubDate>
       
-      <guid>http://gen1us2k.github.io/page/about/</guid>
+      <guid>http://gen1us2k.com/page/about/</guid>
       <description>&lt;p&gt;Тимлид в Namba Taxi. Пишу код на Python/Go. Разбираюсь с интересными задачами.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Ariadna. Зачем нужен еще один геокодер для ОСМ?</title>
-      <link>http://gen1us2k.github.io/2016/03/31/ariadna/</link>
+      <link>http://gen1us2k.com/2016/03/31/ariadna/</link>
       <pubDate>Thu, 31 Mar 2016 19:45:23 +0600</pubDate>
       
-      <guid>http://gen1us2k.github.io/2016/03/31/ariadna/</guid>
+      <guid>http://gen1us2k.com/2016/03/31/ariadna/</guid>
       <description>
 
 &lt;p&gt;Всем привет!&lt;/p&gt;
@@ -710,10 +710,10 @@
     
     <item>
       <title>Модели Django и решение проблем с конкурентным доступом к данным</title>
-      <link>http://gen1us2k.github.io/2016/03/31/django-concurrency-text/</link>
+      <link>http://gen1us2k.com/2016/03/31/django-concurrency-text/</link>
       <pubDate>Thu, 31 Mar 2016 19:41:40 +0600</pubDate>
       
-      <guid>http://gen1us2k.github.io/2016/03/31/django-concurrency-text/</guid>
+      <guid>http://gen1us2k.com/2016/03/31/django-concurrency-text/</guid>
       <description>
 
 &lt;p&gt;Всем привет!&lt;/p&gt;
@@ -809,10 +809,10 @@ def buy_something(request):
     
     <item>
       <title>Решение конкурентного доступа к данным в Django</title>
-      <link>http://gen1us2k.github.io/2016/03/31/django-concurrency/</link>
+      <link>http://gen1us2k.com/2016/03/31/django-concurrency/</link>
       <pubDate>Thu, 31 Mar 2016 18:33:21 +0600</pubDate>
       
-      <guid>http://gen1us2k.github.io/2016/03/31/django-concurrency/</guid>
+      <guid>http://gen1us2k.com/2016/03/31/django-concurrency/</guid>
       <description>&lt;p&gt;Рассказывал недавно о том, как писать код в джанговских моделях без рейс кондишнов и конкурентного доступа к данным.&lt;/p&gt;
 
 
@@ -825,10 +825,10 @@ def buy_something(request):
     
     <item>
       <title>Как мы домены мониторили</title>
-      <link>http://gen1us2k.github.io/2016/03/31/domains/</link>
+      <link>http://gen1us2k.com/2016/03/31/domains/</link>
       <pubDate>Thu, 31 Mar 2016 17:58:02 +0600</pubDate>
       
-      <guid>http://gen1us2k.github.io/2016/03/31/domains/</guid>
+      <guid>http://gen1us2k.com/2016/03/31/domains/</guid>
       <description>
 
 &lt;p&gt;Всем привет! Все началось с того, что у нас в компании развелось очень много доменов которые нужно вовремя продлевать. И вот, после одного провала с продлением доменов, было принято решение начать мониторить дату истечения домена и выводить его в мониторинге Nagios.&lt;/p&gt;
@@ -896,10 +896,10 @@ if __name__ == &#39;__main__&#39;:
     
     <item>
       <title>Используем Git в качестве инструмента для деплоя веб приложения</title>
-      <link>http://gen1us2k.github.io/2016/03/31/deploy/</link>
+      <link>http://gen1us2k.com/2016/03/31/deploy/</link>
       <pubDate>Thu, 31 Mar 2016 15:23:31 +0600</pubDate>
       
-      <guid>http://gen1us2k.github.io/2016/03/31/deploy/</guid>
+      <guid>http://gen1us2k.com/2016/03/31/deploy/</guid>
       <description>
 
 &lt;h3 id=&#34;что-имеем:0814af543608f4fd171b2e9cf43d9917&#34;&gt;Что имеем&lt;/h3&gt;
