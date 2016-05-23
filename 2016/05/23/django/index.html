@@ -3,8 +3,8 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>С чего начать изучать Go? &middot; Gen1us2k</title>
-        <meta name="description" content="О технологиях, бекендах, Go и жизни">
+        <title>Делаем АПИ на Django  &middot; Gen1us2k</title>
+        <meta name="description" content="Используя django-rest-framework и работаем с транзакциями">
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
         <meta name="generator" content="Hugo 0.15" />
@@ -90,10 +90,12 @@ ga('send', 'pageview');
 <div class="container">
     <article class="post-container" itemscope="" itemtype="http://schema.org/BlogPosting">
         <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">С чего начать изучать Go?</h1>
+    <h1 class="post-title" itemprop="name headline">Делаем АПИ на Django </h1>
+    
+        <p class="post-description" itemprop="description">Используя django-rest-framework и работаем с транзакциями</p>
     
     <p class="post-date">
-        <span>Published <time datetime="2016-04-01" itemprop="datePublished">Fri, Apr 1, 2016</time></span>
+        <span>Published <time datetime="2016-05-23" itemprop="datePublished">Mon, May 23, 2016</time></span>
         <span>by</span>
         <span itemscope="" itemprop="author" itemtype="http://schema.org/Person">
             <span itemprop="name">
@@ -106,59 +108,46 @@ ga('send', 'pageview');
         <div class="post-content clearfix" itemprop="articleBody">
     
 
-    
+    <p>В воскресенье 22 мая записывал стрим о том, как сделать простую апи для работы с задачами. В системе у нас два типа пользователей: Заказчик и исполнитель.
+У задачи есть цена и чтобы исполнителю взять задачу на исполнение, ему нужны деньги на балансе. В видео раскрываются моменты с тем, как написать безопасное обновление баланса для пользователей. И на какие моменты нужно общать внимание.
+Код тут <a href="https://github.com/gen1us2k/django-example">https://github.com/gen1us2k/django-example</a></p>
 
-<p>Привет всем!
-Так сложилось в жизни, что я уже несколько месяцев пишу на Go.
-И этот язык мне нравится. Нравится своей простотой и мощной стандартной библиотекой. Мощной, но не идеальной. Пока-что единственная задача, которую я решал не стандартной библиотекой - это генерация UUID.
-Но в интернетах много решений этой проблемы.
-На стантартной библиотеке можно делать много хороших вещей. Например сделать полноценный вебсервис, хоть и простой, но полностью на стандартной библиотеке, например <a href="https://github.com/gen1us2k/slack-typeform">Slack-typeform</a>. Сервис, который использует TypeForm для заполнения формы, и автоматически рассылает инвайты в слак, используя API обоих сервисов.</p>
 
-<h3 id="с-чего-начать:27e4f973bd3581492ba026d8617cd0db">С чего начать?</h3>
+<div style="position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;">
+  <iframe src="//www.youtube.com/embed/U6cN932mCFM" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen frameborder="0"></iframe>
+ </div>
 
-<p>Начать можно с хабра <a href="https://habrahabr.ru/post/269355/">С чего начать новичку в Go</a>
-Или же можно пойти по оффициальному пути.</p>
-
-<p><a href="https://tour.golang.org">Тур по Go</a></p>
-
-<p>Или же <a href="http://www.golang-book.com">Книги по Go</a></p>
-
-<p>или <a href="https://gobyexample.com">Go на примерах</a></p>
-
-<p>В принципе вам хватит потратить пару часов на туре по Go. Дальше можно писать код.
-Из книг рекомендую &ldquo;Язык программирования Go&rdquo; от Кернигана.</p>
-
-<p>Из видео стоит посмотреть</p>
-
-<p><a href="https://www.youtube.com/watch?v=jgVhBThJdXc">Программирование на Go</a></p>
-
-<p><a href="https://www.youtube.com/watch?v=f6kdp27TYZs">Go Concurrency Patterns</a></p>
-
-<p><a href="https://www.youtube.com/watch?v=cN_DpYBzKso">Concurrency is not parallelism</a></p>
-
-<p><a href="https://www.youtube.com/watch?v=QDDwwePbDtw">Anvanced Go concurrency patterns</a></p>
-
-<p>Позже обязательно к прочтению <a href="https://gocodecloud.com/blog/2016/03/29/go-vendoring-beginner-tutorial/">Вендоринг для начинающих</a></p>
 
 </div>
 
         <footer class="post-footer clearfix">
     
+        <p class="post-tags">
+            <span>Tagged:</span>
+            
+                 <a href="http://gen1us2k.com/tags/django/">django</a>
+            
+                 <a href="http://gen1us2k.com/tags/concurrency/">concurrency</a>
+            
+                 <a href="http://gen1us2k.com/tags/api/">api</a>
+            
+        </p>
+    
 
     <div class="share">
-        <a class="icon-twitter" href="http://twitter.com/share?text=%d0%a1%20%d1%87%d0%b5%d0%b3%d0%be%20%d0%bd%d0%b0%d1%87%d0%b0%d1%82%d1%8c%20%d0%b8%d0%b7%d1%83%d1%87%d0%b0%d1%82%d1%8c%20Go%3f&url=http%3a%2f%2fgen1us2k.com%2f2016%2f04%2f01%2fgolang%2f"
+        <a class="icon-twitter" href="http://twitter.com/share?text=%d0%94%d0%b5%d0%bb%d0%b0%d0%b5%d0%bc%20%d0%90%d0%9f%d0%98%20%d0%bd%d0%b0%20Django%20&url=http%3a%2f%2fgen1us2k.com%2f2016%2f05%2f23%2fdjango%2f"
             onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
             <i class="fa fa-twitter"></i>
             <span class="hidden">Twitter</span>
         </a>
 
-        <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fgen1us2k.com%2f2016%2f04%2f01%2fgolang%2f"
+        <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fgen1us2k.com%2f2016%2f05%2f23%2fdjango%2f"
             onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
             <i class="fa fa-facebook"></i>
             <span class="hidden">Facebook</span>
         </a>
 
-        <a class="icon-google-plus" href="https://plus.google.com/share?url=http%3a%2f%2fgen1us2k.com%2f2016%2f04%2f01%2fgolang%2f"
+        <a class="icon-google-plus" href="https://plus.google.com/share?url=http%3a%2f%2fgen1us2k.com%2f2016%2f05%2f23%2fdjango%2f"
            onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
            <i class="fa fa-google-plus"></i>
             <span class="hidden">Google+</span>
@@ -171,9 +160,9 @@ ga('send', 'pageview');
         <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'gen1us2k';
-    var disqus_identifier = 'http:\/\/gen1us2k.com\/2016\/04\/01\/golang\/';
-    var disqus_title = 'С чего начать изучать Go?';
-    var disqus_url = 'http:\/\/gen1us2k.com\/2016\/04\/01\/golang\/';
+    var disqus_identifier = 'http:\/\/gen1us2k.com\/2016\/05\/23\/django\/';
+    var disqus_title = 'Делаем АПИ на Django ';
+    var disqus_url = 'http:\/\/gen1us2k.com\/2016\/05\/23\/django\/';
 
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
