@@ -7,8 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Gen1us2k</copyright>
-    <lastBuildDate>Mon, 23 May 2016 23:42:56 +0600</lastBuildDate>
+    <lastBuildDate>Thu, 26 May 2016 19:37:07 +0600</lastBuildDate>
     <atom:link href="http://gen1us2k.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Обучение и программист</title>
+      <link>http://gen1us2k.com/2016/05/26/education/</link>
+      <pubDate>Thu, 26 May 2016 19:37:07 +0600</pubDate>
+      
+      <guid>http://gen1us2k.com/2016/05/26/education/</guid>
+      <description>&lt;p&gt;Сегодня говорили с Костей, Ромой и Даником об образовании в программировании.
+Смотрите запись.&lt;/p&gt;
+
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;//www.youtube.com/embed/xlJSx_8ryRY&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
+ &lt;/div&gt;
+
+</description>
+    </item>
     
     <item>
       <title>Делаем АПИ на Django </title>
@@ -954,22 +971,6 @@ def buy_something(request):
 По возможности старайтесь делать транзакции как можно короче, чтобы не блокировать работу с данными в БД.&lt;/p&gt;
 
 &lt;p&gt;Дополнительно: про уровни транзакций в MySQL рассказали &lt;a href=&#34;https://habrahabr.ru/post/135217/&#34;&gt;«MySQL: уровни изоляции транзакций».&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Решение конкурентного доступа к данным в Django</title>
-      <link>http://gen1us2k.com/2016/03/31/django-concurrency/</link>
-      <pubDate>Thu, 31 Mar 2016 18:33:21 +0600</pubDate>
-      
-      <guid>http://gen1us2k.com/2016/03/31/django-concurrency/</guid>
-      <description>&lt;p&gt;Рассказывал недавно о том, как писать код в джанговских моделях без рейс кондишнов и конкурентного доступа к данным.&lt;/p&gt;
-
-
-&lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;//www.youtube.com/embed/H2vzpGQ57r0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
- &lt;/div&gt;
-
 </description>
     </item>
     
