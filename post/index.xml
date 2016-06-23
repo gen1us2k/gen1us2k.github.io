@@ -7,8 +7,70 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Gen1us2k</copyright>
-    <lastBuildDate>Thu, 26 May 2016 19:37:07 +0600</lastBuildDate>
+    <lastBuildDate>Thu, 23 Jun 2016 23:56:09 +0600</lastBuildDate>
     <atom:link href="http://gen1us2k.com/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Петр Зайцев о индексах</title>
+      <link>http://gen1us2k.com/2016/06/23/mysql-indexes/</link>
+      <pubDate>Thu, 23 Jun 2016 23:56:09 +0600</pubDate>
+      
+      <guid>http://gen1us2k.com/2016/06/23/mysql-indexes/</guid>
+      <description>&lt;p&gt;Привет. Делюсь очень хорошим мастер классом про индексы в MySQL.
+Полезен всем. Очень хорошо расказывает о том, какие индексы используются в:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;NDB&lt;/li&gt;
+&lt;li&gt;InnoDB&lt;/li&gt;
+&lt;li&gt;MyISAM&lt;/li&gt;
+&lt;li&gt;TokuDB&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;//www.youtube.com/embed/39e1vAGD3hg&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
+ &lt;/div&gt;
+
+</description>
+    </item>
+    
+    <item>
+      <title>Самые частые ошибки и пути решения при росте нагрузки и масштабировании</title>
+      <link>http://gen1us2k.com/2016/06/23/scaling1/</link>
+      <pubDate>Thu, 23 Jun 2016 23:47:43 +0600</pubDate>
+      
+      <guid>http://gen1us2k.com/2016/06/23/scaling1/</guid>
+      <description>
+
+&lt;p&gt;Всем привет. Сегодня хотел бы рассказать о самых частых и детских болезней проектов.
+Сначала мы делаем свой проект, допустим какой-нибудь веб сервис, мы в стадии стартапа или активной разработки. Приходит момент, когда мы запускаем проект, деплоим его на сервера, настраиваем окружение на нем. И в начале мы поднимаем все на одной виртуалке. Кто-то начинает задумываться о каких-то глазах на продакшне, кто-то нет.
+Кто-то ставит себе newrelic, opbeat, или делает сбор эксепшнов либо через сентри, либо путем отправки на почту. Может быть кто-то пишет лог. Постепенно, пользователей становиться больше, соответсвенно и нагрузка растет. Давайте разберемся, что такое нагрузка и какая она бывает.&lt;/p&gt;
+
+&lt;h3 id=&#34;что-такое-нагрузка:5bca2f17d7291f735910da9e1b034bfe&#34;&gt;Что такое нагрузка&lt;/h3&gt;
+
+&lt;p&gt;Нагрузку генерят пользователи. Нагрузка бывает разная: на диск, на память, на процессор, на сетевой интерфейс. Обычно она растет плавно, иногда бывают всплески, из-за большого наплыва пользователей или DDoS атаки. Предже чем что-то делать, нужно проанализировать, на какой из компонентов у нас идет нагрузка. Есть множество утилит для просмотра состояния нагрузки на каждый из компонентов сервера:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;top/atop/htop/mpstat - для просмотра загрузки CPU&lt;/li&gt;
+&lt;li&gt;free, cat /proc/meminfo/top/atop - для просмотра использования оперативной памяти&lt;/li&gt;
+&lt;li&gt;Iostat/iotop для диска&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Какие частые симптомы бывают при нагрузке на диск:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Диск загружен, потому что с него очень часто и много читают. Эту нагрузку может генерить либо ваше приложение, либо БД. Либо у вас много статики. Суть одна. Уменьшить чтение можно, закешировав их в оперативной памяти и отдавать их с нее. Например увеличить innodb_buffer_pool_size установив значение, равной весу всех баз. Либо настроить кеширование статики в nginx, отдавая горячую статику с оперативной памяти&lt;/li&gt;
+&lt;li&gt;Диск загружен, на запись. Ее может генерить база, может генерить приложение, если пользователи допустим много файлов аплодят, либо активно пишется лог. Решение - уменьшить запись. В случае с БД если это возможно, то писать в базу большой порцией данных за меньшее время. Можно отключить логгиирование или дебаг, если он включен&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;В случае с ОЗУ - либо это последствия того, что мы скинули все в память, снижая нагрузку на диск. Либо у нас приложение течет.
+В случае нагрузки на CPU - это вычисления и ожидание io. Сетевого или дискового&lt;/p&gt;
+
+&lt;p&gt;Все эти проблемы нужно решать. При этом на сервере у вас происходит борьба за ресурсы между кучей бекендов, которые у вас установлены&lt;/p&gt;
+
+&lt;p&gt;По нагрузке и вводной части все. Подробнее о путях решения расскажу в следующем посте&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Обучение и программист</title>
@@ -944,124 +1006,6 @@ def buy_something(request):
   &lt;iframe src=&#34;//www.youtube.com/embed/H2vzpGQ57r0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
  &lt;/div&gt;
 
-</description>
-    </item>
-    
-    <item>
-      <title>Как мы домены мониторили</title>
-      <link>http://gen1us2k.com/2016/03/31/domains/</link>
-      <pubDate>Thu, 31 Mar 2016 17:58:02 +0600</pubDate>
-      
-      <guid>http://gen1us2k.com/2016/03/31/domains/</guid>
-      <description>
-
-&lt;p&gt;Всем привет! Все началось с того, что у нас в компании развелось очень много доменов которые нужно вовремя продлевать. И вот, после одного провала с продлением доменов, было принято решение начать мониторить дату истечения домена и выводить его в мониторинге Nagios.&lt;/p&gt;
-
-&lt;h4 id=&#34;как-мониторить:ab1b71fc907eef6a6ae61cecfc19728a&#34;&gt;Как мониторить?&lt;/h4&gt;
-
-&lt;p&gt;У нас было несколько доменов в зонах kz, ru, kg, ge, com.&lt;/p&gt;
-
-&lt;p&gt;Самый простой способ узнать всю нужную информацию о домене — запустить whois. Это по идее должен знать каждый. Но как все это дело внедрить в мониторинг?&lt;/p&gt;
-
-&lt;h4 id=&#34;чем-мониторить:ab1b71fc907eef6a6ae61cecfc19728a&#34;&gt;Чем мониторить?&lt;/h4&gt;
-
-&lt;p&gt;Покопавшись по просторам интернета, был найден модуль &lt;a href=&#34;https://pypi.python.org/pypi/python-whois&#34;&gt;python-whois&lt;/a&gt;.
-Он хорошо выполнял свою работу для доменов com, net и кучи других доменов, описанных в описании к модулю.&lt;/p&gt;
-
-&lt;p&gt;Не хватало функционала для нескольких доменов в зонах kg.&lt;/p&gt;
-
-&lt;p&gt;В итоге появился форк проекта &lt;a href=&#34;https://github.com/gen1us2k/python-whois&#34;&gt;python-whois-extended&lt;/a&gt;, который расширяет функционал для больших TLD.&lt;/p&gt;
-
-&lt;p&gt;Ок, как внедрить в нагиос?&lt;/p&gt;
-
-&lt;p&gt;Все просто, пишем простой чек&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;#!/usr/bin/env python#
-# Usage:
-# python check_domain.py -d DOMAIN
-import whois
-from datetime import datetime
-
-from sys import exit
-from optparse import OptionParser
-
-
-def check_domain(domain):
-    q = whois.query(domain)
-    if (q.expiration_date - datetime.now()).days &amp;lt;= 30:
-        print &amp;quot;CRITICAL: Domain: {0} expires on {1}&amp;quot;.format(domain, q.expiration_date)
-        exit(2)
-    print &amp;quot;OK: Domain: {0} expires on {1}&amp;quot;.format(domain, q.expiration_date)
-
-if __name__ == &#39;__main__&#39;:
-    parser = OptionParser()
-    parser.add_option(&amp;quot;-d&amp;quot;, &amp;quot;--domain&amp;quot;, dest=&amp;quot;domain&amp;quot;, help=&amp;quot;Domain to monitor expiry date&amp;quot;)
-    (options, args) = parser.parse_args()
-    if not options.domain:
-        print parser.print_help()
-        exit(0)
-
-    check_domain(options.domain)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Что он делает? Светит красным в мониторинге за месяц до истечения домена.&lt;/p&gt;
-
-&lt;p&gt;Что интересно, появился еще один мейнтейнер, который добавил поддержку для hk, cn и kr TLD.&lt;/p&gt;
-
-&lt;p&gt;Текущий список поддерживаемых доменов такой:&lt;/p&gt;
-
-&lt;p&gt;com, net, org, uk, pl, ru, lv, jp, co_jp, de, at, eu, biz, info, name, us, co, me, be, nz, cz, it, fr, kg, vc, fm, tv, edu, ca, cn, kr, hk&lt;/p&gt;
-
-&lt;p&gt;Пул-реквесты, запросы фич привествуются!&lt;/p&gt;
-
-&lt;p&gt;Надеюсь, мой опыт поможет избавиться от подобной проблемы&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Используем Git в качестве инструмента для деплоя веб приложения</title>
-      <link>http://gen1us2k.com/2016/03/31/deploy/</link>
-      <pubDate>Thu, 31 Mar 2016 15:23:31 +0600</pubDate>
-      
-      <guid>http://gen1us2k.com/2016/03/31/deploy/</guid>
-      <description>
-
-&lt;h3 id=&#34;что-имеем:0814af543608f4fd171b2e9cf43d9917&#34;&gt;Что имеем&lt;/h3&gt;
-
-&lt;p&gt;У нас есть веб приложение, которое мы разрабатываем. Нам нужно быстро и легко добавлять изменения на продакшн&lt;/p&gt;
-
-&lt;h4 id=&#34;что-предлагает-нам-git:0814af543608f4fd171b2e9cf43d9917&#34;&gt;Что предлагает нам Git&lt;/h4&gt;
-
-&lt;p&gt;post-merge — Этот хук вызывается ‘git-merge’, после того, как мы выполнили &amp;lsquo;git-pull’ или &amp;lsquo;git-merge’ на локальном репозитории. Хук не выполнится, если у нас будут конфликты при мердже.
-post-checkout — Этот хук вызывается &amp;lsquo;git-checkout’, после того, как мы выполним &amp;lsquo;git-clone’ или &amp;lsquo;git-checkout’.&lt;/p&gt;
-
-&lt;h4 id=&#34;что-делаем:0814af543608f4fd171b2e9cf43d9917&#34;&gt;Что делаем&lt;/h4&gt;
-
-&lt;p&gt;Механизм деплоя будет примерно таким:
-1. Поднимаем git сервер. Переводим всю разработку на git. Протестированный код заливаем в репозиторий
-2. Пишем хуки, которые будут делать то, что нам нужно сделать после деплоя. В данном случае хук post-merge.
-3. Если хотим развернуть рабочую конфигурацию на чистом сервере, то пишем хук post-checkout&lt;/p&gt;
-
-&lt;h4 id=&#34;к-примеру-нам-после-деплоя-надо-почистить-какую-то-папку-и-перезагрузить-апач:0814af543608f4fd171b2e9cf43d9917&#34;&gt;К примеру, нам после деплоя надо почистить какую-то папку и перезагрузить апач.&lt;/h4&gt;
-
-&lt;pre&gt;&lt;code&gt;#!/bin/bash /etc/init.d/apache2 stop find /path/to/folder -type f -delete /etc/init.d/apache2 start
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Положим этот скрипт в .git/hooks/post-merge.
-Выполняем git pull и у нас выполняется этот скрипт&lt;/p&gt;
-
-&lt;p&gt;Аналогично и для хука post-checkout&lt;/p&gt;
-
-&lt;p&gt;Плюсы:&lt;/p&gt;
-
-&lt;p&gt;Быстрая доставка изменений на продакшн.
-Автоматизация
-Централизированное хранение рабочего веб проекта&lt;/p&gt;
-
-&lt;p&gt;Минусы:&lt;/p&gt;
-
-&lt;p&gt;Данная схема не будет работать, если мы будем создавать новые ветки, путем git checkout -b newBranch
-Данная схема не будет работать, если мы будем вручную мерджить изменения в локальном хранилище.&lt;/p&gt;
 </description>
     </item>
     

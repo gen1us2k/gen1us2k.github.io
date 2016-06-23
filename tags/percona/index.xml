@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Percona on Andrew Minkin</title>
+    <link>http://gen1us2k.com/tags/percona/</link>
+    <description>Recent content in Percona on Andrew Minkin</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Gen1us2k</copyright>
+    <lastBuildDate>Thu, 23 Jun 2016 23:56:09 +0600</lastBuildDate>
+    <atom:link href="http://gen1us2k.com/tags/percona/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Петр Зайцев о индексах</title>
+      <link>http://gen1us2k.com/2016/06/23/mysql-indexes/</link>
+      <pubDate>Thu, 23 Jun 2016 23:56:09 +0600</pubDate>
+      
+      <guid>http://gen1us2k.com/2016/06/23/mysql-indexes/</guid>
+      <description>&lt;p&gt;Привет. Делюсь очень хорошим мастер классом про индексы в MySQL.
+Полезен всем. Очень хорошо расказывает о том, какие индексы используются в:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;NDB&lt;/li&gt;
+&lt;li&gt;InnoDB&lt;/li&gt;
+&lt;li&gt;MyISAM&lt;/li&gt;
+&lt;li&gt;TokuDB&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;//www.youtube.com/embed/39e1vAGD3hg&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
+ &lt;/div&gt;
+
+</description>
+    </item>
+    
+  </channel>
+</rss>

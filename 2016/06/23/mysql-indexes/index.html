@@ -3,8 +3,8 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Andrew Minkin &middot; Gen1us2k</title>
-        <meta name="description" content="О технологиях, бекендах, Go и жизни">
+        <title>Петр Зайцев о индексах &middot; Gen1us2k</title>
+        <meta name="description" content="Про индексы в MySQL">
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
         <meta name="generator" content="Hugo 0.15" />
@@ -87,87 +87,98 @@ ga('send', 'pageview');
             <div id="container">
 
 
-<div id="post-index" class="container" itemscope="" itemtype="http://schema.org/Blog">
-    
+<div class="container">
+    <article class="post-container" itemscope="" itemtype="http://schema.org/BlogPosting">
         <header class="post-header">
-            <h1 class="post-title" itemprop="name">Shit happens</h1>
-            <p>О технологиях, бекендах, Go и жизни</p>
-        </header>
+    <h1 class="post-title" itemprop="name headline">Петр Зайцев о индексах</h1>
+    
+        <p class="post-description" itemprop="description">Про индексы в MySQL</p>
+    
+    <p class="post-date">
+        <span>Published <time datetime="2016-06-23" itemprop="datePublished">Thu, Jun 23, 2016</time></span>
+        <span>by</span>
+        <span itemscope="" itemprop="author" itemtype="http://schema.org/Person">
+            <span itemprop="name">
+                <a href="https://google.com/&#43;AndrewMinkinGen1us2k" itemprop="url" rel="author">Gen1us2k</a>
+            </span>
+        </span>
+    </p>
+</header>
+
+        <div class="post-content clearfix" itemprop="articleBody">
     
 
-    <ol class="post-list">
-        
-        
-            <li class="post-stub" itemprop="blogPost" itemscope="" itemtype="http://schema.org/BlogPosting">
-    <a href="http://gen1us2k.com/2016/03/31/plague/" itemprop="url" title="Go to post detail">
-        <h4 class="post-stub-title" itemprop="name">Тупняк - как чума 21 века</h4>
-        <time class="post-stub-date" datetime="2016-03-31">Published Thu, Mar 31, 2016</time>
-        
-    </a>
-</li>
-        
-            <li class="post-stub" itemprop="blogPost" itemscope="" itemtype="http://schema.org/BlogPosting">
-    <a href="http://gen1us2k.com/2016/03/31/yandex/" itemprop="url" title="Go to post detail">
-        <h4 class="post-stub-title" itemprop="name">Как я проходил собеседование в Яндекс</h4>
-        <time class="post-stub-date" datetime="2016-03-31">Published Thu, Mar 31, 2016</time>
-        
-    </a>
-</li>
-        
-            <li class="post-stub" itemprop="blogPost" itemscope="" itemtype="http://schema.org/BlogPosting">
-    <a href="http://gen1us2k.com/2016/03/31/ariadna/" itemprop="url" title="Go to post detail">
-        <h4 class="post-stub-title" itemprop="name">Ariadna. Зачем нужен еще один геокодер для ОСМ?</h4>
-        <time class="post-stub-date" datetime="2016-03-31">Published Thu, Mar 31, 2016</time>
-        
-    </a>
-</li>
-        
-            <li class="post-stub" itemprop="blogPost" itemscope="" itemtype="http://schema.org/BlogPosting">
-    <a href="http://gen1us2k.com/2016/03/31/django-concurrency-text/" itemprop="url" title="Go to post detail">
-        <h4 class="post-stub-title" itemprop="name">Модели Django и решение проблем с конкурентным доступом к данным</h4>
-        <time class="post-stub-date" datetime="2016-03-31">Published Thu, Mar 31, 2016</time>
-        
-    </a>
-</li>
-        
-            <li class="post-stub" itemprop="blogPost" itemscope="" itemtype="http://schema.org/BlogPosting">
-    <a href="http://gen1us2k.com/2016/03/31/django-concurrency/" itemprop="url" title="Go to post detail">
-        <h4 class="post-stub-title" itemprop="name">Решение конкурентного доступа к данным в Django</h4>
-        <time class="post-stub-date" datetime="2016-03-31">Published Thu, Mar 31, 2016</time>
-        
-    </a>
-</li>
-        
-            <li class="post-stub" itemprop="blogPost" itemscope="" itemtype="http://schema.org/BlogPosting">
-    <a href="http://gen1us2k.com/2016/03/31/domains/" itemprop="url" title="Go to post detail">
-        <h4 class="post-stub-title" itemprop="name">Как мы домены мониторили</h4>
-        <time class="post-stub-date" datetime="2016-03-31">Published Thu, Mar 31, 2016</time>
-        
-    </a>
-</li>
-        
-            <li class="post-stub" itemprop="blogPost" itemscope="" itemtype="http://schema.org/BlogPosting">
-    <a href="http://gen1us2k.com/2016/03/31/deploy/" itemprop="url" title="Go to post detail">
-        <h4 class="post-stub-title" itemprop="name">Используем Git в качестве инструмента для деплоя веб приложения</h4>
-        <time class="post-stub-date" datetime="2016-03-31">Published Thu, Mar 31, 2016</time>
-        
-    </a>
-</li>
-        
-    </ol>
+    <p>Привет. Делюсь очень хорошим мастер классом про индексы в MySQL.
+Полезен всем. Очень хорошо расказывает о том, какие индексы используются в:</p>
 
-    <div class="post-navigation">
-        
+<ol>
+<li>NDB</li>
+<li>InnoDB</li>
+<li>MyISAM</li>
+<li>TokuDB</li>
+</ol>
 
-    <nav class="pagination" role="navigation">
-        <span class="page-number">Page 2 of 2</span>
-        
-            <a class="newer-posts" href="http://gen1us2k.com/">&larr; Newer Posts</a>
-        
-        
-    </nav>
 
+<div style="position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;">
+  <iframe src="//www.youtube.com/embed/39e1vAGD3hg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen frameborder="0"></iframe>
+ </div>
+
+
+</div>
+
+        <footer class="post-footer clearfix">
+    
+        <p class="post-tags">
+            <span>Tagged:</span>
+            
+                 <a href="http://gen1us2k.com/tags/percona/">percona</a>
+            
+                 <a href="http://gen1us2k.com/tags/mysql/">mysql</a>
+            
+        </p>
+    
+
+    <div class="share">
+        <a class="icon-twitter" href="http://twitter.com/share?text=%d0%9f%d0%b5%d1%82%d1%80%20%d0%97%d0%b0%d0%b9%d1%86%d0%b5%d0%b2%20%d0%be%20%d0%b8%d0%bd%d0%b4%d0%b5%d0%ba%d1%81%d0%b0%d1%85&url=http%3a%2f%2fgen1us2k.com%2f2016%2f06%2f23%2fmysql-indexes%2f"
+            onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+            <i class="fa fa-twitter"></i>
+            <span class="hidden">Twitter</span>
+        </a>
+
+        <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fgen1us2k.com%2f2016%2f06%2f23%2fmysql-indexes%2f"
+            onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+            <i class="fa fa-facebook"></i>
+            <span class="hidden">Facebook</span>
+        </a>
+
+        <a class="icon-google-plus" href="https://plus.google.com/share?url=http%3a%2f%2fgen1us2k.com%2f2016%2f06%2f23%2fmysql-indexes%2f"
+           onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+           <i class="fa fa-google-plus"></i>
+            <span class="hidden">Google+</span>
+        </a>
     </div>
+</footer>
+
+        
+    <div class="comments">
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'gen1us2k';
+    var disqus_identifier = 'http:\/\/gen1us2k.com\/2016\/06\/23\/mysql-indexes\/';
+    var disqus_title = 'Петр Зайцев о индексах';
+    var disqus_url = 'http:\/\/gen1us2k.com\/2016\/06\/23\/mysql-indexes\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+
+    </article>
 </div>
 
             </div>
@@ -200,3 +211,4 @@ ga('send', 'pageview');
         <script src="http://gen1us2k.com/js/scripts.js"></script>
     </body>
 </html>
+
