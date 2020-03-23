@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="https://www.w3.org/2005/Atom">
   <channel>
     <title>Communication on Andrew Minkin</title>
-    <link>http://gen1us2k.com/tags/communication/</link>
+    <link>https://gen1us2k.com/tags/communication/</link>
     <description>Recent content in Communication on Andrew Minkin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Gen1us2k</copyright>
     <lastBuildDate>Mon, 16 May 2016 20:45:51 +0600</lastBuildDate>
-    <atom:link href="http://gen1us2k.com/tags/communication/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://gen1us2k.com/tags/communication/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Коммуникация с программистами. Как практики стартапов могут помочь ставить задачи.</title>
-      <link>http://gen1us2k.com/2016/05/16/how_to_create_tasks/</link>
+      <link>https://gen1us2k.com/2016/05/16/how_to_create_tasks/</link>
       <pubDate>Mon, 16 May 2016 20:45:51 +0600</pubDate>
       
-      <guid>http://gen1us2k.com/2016/05/16/how_to_create_tasks/</guid>
+      <guid>https://gen1us2k.com/2016/05/16/how_to_create_tasks/</guid>
       <description>
 
 &lt;p&gt;Этим постом я начинаю цикл статей по коммуникации с разработчиками. Эта вводная статья, которая расскажет о том, как практики стартапов могут помочь вам в постановке задач программистам, да и не только.&lt;/p&gt;
@@ -24,7 +24,7 @@
 
 &lt;ol&gt;
 &lt;li&gt;Коммуникация с программистами. Как практики стартапов могут помочь ставить задачи&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://gen1us2k.com/2016/05/23/tasks_explained/&#34;&gt;Как правильно ставить задачи&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://gen1us2k.com/2016/05/23/tasks_explained/&#34;&gt;Как правильно ставить задачи&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;Коммуникация с программистами. Как практики стартапов могут помочь ставить задачи

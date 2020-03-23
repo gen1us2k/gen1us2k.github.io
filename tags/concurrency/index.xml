@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="https://www.w3.org/2005/Atom">
   <channel>
     <title>Concurrency on Andrew Minkin</title>
-    <link>http://gen1us2k.com/tags/concurrency/</link>
+    <link>https://gen1us2k.com/tags/concurrency/</link>
     <description>Recent content in Concurrency on Andrew Minkin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Gen1us2k</copyright>
     <lastBuildDate>Mon, 23 May 2016 23:42:56 +0600</lastBuildDate>
-    <atom:link href="http://gen1us2k.com/tags/concurrency/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://gen1us2k.com/tags/concurrency/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Делаем АПИ на Django </title>
-      <link>http://gen1us2k.com/2016/05/23/django/</link>
+      <link>https://gen1us2k.com/2016/05/23/django/</link>
       <pubDate>Mon, 23 May 2016 23:42:56 +0600</pubDate>
       
-      <guid>http://gen1us2k.com/2016/05/23/django/</guid>
+      <guid>https://gen1us2k.com/2016/05/23/django/</guid>
       <description>&lt;p&gt;В воскресенье 22 мая записывал стрим о том, как сделать простую апи для работы с задачами. В системе у нас два типа пользователей: Заказчик и исполнитель.
 У задачи есть цена и чтобы исполнителю взять задачу на исполнение, ему нужны деньги на балансе. В видео раскрываются моменты с тем, как написать безопасное обновление баланса для пользователей. И на какие моменты нужно общать внимание.
-Код тут &lt;a href=&#34;https://github.com/gen1us2k/django-example&#34;&gt;https://github.com/gen1us2k/django-example&lt;/a&gt;&lt;/p&gt;
+Код тут &lt;a href=&#34;httpss://github.com/gen1us2k/django-example&#34;&gt;httpss://github.com/gen1us2k/django-example&lt;/a&gt;&lt;/p&gt;
 
 
 &lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
@@ -30,10 +30,10 @@
     
     <item>
       <title>Модели Django и решение проблем с конкурентным доступом к данным</title>
-      <link>http://gen1us2k.com/2016/03/31/django-concurrency-text/</link>
+      <link>https://gen1us2k.com/2016/03/31/django-concurrency-text/</link>
       <pubDate>Thu, 31 Mar 2016 19:41:40 +0600</pubDate>
       
-      <guid>http://gen1us2k.com/2016/03/31/django-concurrency-text/</guid>
+      <guid>https://gen1us2k.com/2016/03/31/django-concurrency-text/</guid>
       <description>
 
 &lt;p&gt;Всем привет!&lt;/p&gt;
@@ -123,16 +123,16 @@ def buy_something(request):
 Используйте select for update для блокировки данных во время изменения
 По возможности старайтесь делать транзакции как можно короче, чтобы не блокировать работу с данными в БД.&lt;/p&gt;
 
-&lt;p&gt;Дополнительно: про уровни транзакций в MySQL рассказали &lt;a href=&#34;https://habrahabr.ru/post/135217/&#34;&gt;«MySQL: уровни изоляции транзакций».&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Дополнительно: про уровни транзакций в MySQL рассказали &lt;a href=&#34;httpss://habrahabr.ru/post/135217/&#34;&gt;«MySQL: уровни изоляции транзакций».&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Решение конкурентного доступа к данным в Django</title>
-      <link>http://gen1us2k.com/2016/03/31/django-concurrency/</link>
+      <link>https://gen1us2k.com/2016/03/31/django-concurrency/</link>
       <pubDate>Thu, 31 Mar 2016 18:33:21 +0600</pubDate>
       
-      <guid>http://gen1us2k.com/2016/03/31/django-concurrency/</guid>
+      <guid>https://gen1us2k.com/2016/03/31/django-concurrency/</guid>
       <description>&lt;p&gt;Рассказывал недавно о том, как писать код в джанговских моделях без рейс кондишнов и конкурентного доступа к данным.&lt;/p&gt;
 
 

@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="https://www.w3.org/2005/Atom">
   <channel>
     <title>Profiling on Andrew Minkin</title>
-    <link>http://gen1us2k.com/tags/profiling/</link>
+    <link>https://gen1us2k.com/tags/profiling/</link>
     <description>Recent content in Profiling on Andrew Minkin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Gen1us2k</copyright>
     <lastBuildDate>Mon, 23 May 2016 11:28:38 +0600</lastBuildDate>
-    <atom:link href="http://gen1us2k.com/tags/profiling/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://gen1us2k.com/tags/profiling/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Как профилировать и оптимизировать Go</title>
-      <link>http://gen1us2k.com/2016/05/23/go-profiling/</link>
+      <link>https://gen1us2k.com/2016/05/23/go-profiling/</link>
       <pubDate>Mon, 23 May 2016 11:28:38 +0600</pubDate>
       
-      <guid>http://gen1us2k.com/2016/05/23/go-profiling/</guid>
+      <guid>https://gen1us2k.com/2016/05/23/go-profiling/</guid>
       <description>&lt;p&gt;Хороший доклад от Убера о том, как профайлить и оптимизировать го программы.&lt;/p&gt;
 
 

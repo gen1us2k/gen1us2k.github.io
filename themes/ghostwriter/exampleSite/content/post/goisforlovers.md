@@ -312,7 +312,7 @@ and skips the block if the variable is absent:
 
 ```
 {{with .Site.Params.TwitterUser}}<span class="twitter">
-<a href="https://twitter.com/{{.}}" rel="author">
+<a href="httpss://twitter.com/{{.}}" rel="author">
 <img src="/images/twitter.png" width="48" height="48" title="Twitter: {{.}}"
  alt="Twitter"></a>
 </span>{{end}}
@@ -330,5 +330,5 @@ so, such as in this example:
 </nav>
 ```
 
-[go]: <http://golang.org/>
-[gohtmltemplate]: <http://golang.org/pkg/html/template/>
+[go]: <https://golang.org/>
+[gohtmltemplate]: <https://golang.org/pkg/html/template/>

@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="https://www.w3.org/2005/Atom">
   <channel>
     <title>How To on Andrew Minkin</title>
-    <link>http://gen1us2k.com/tags/how-to/</link>
+    <link>https://gen1us2k.com/tags/how-to/</link>
     <description>Recent content in How To on Andrew Minkin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Gen1us2k</copyright>
     <lastBuildDate>Mon, 16 May 2016 16:18:21 +0600</lastBuildDate>
-    <atom:link href="http://gen1us2k.com/tags/how-to/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://gen1us2k.com/tags/how-to/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Как научиться программировать?</title>
-      <link>http://gen1us2k.com/2016/05/16/how_to_learn_programming/</link>
+      <link>https://gen1us2k.com/2016/05/16/how_to_learn_programming/</link>
       <pubDate>Mon, 16 May 2016 16:18:21 +0600</pubDate>
       
-      <guid>http://gen1us2k.com/2016/05/16/how_to_learn_programming/</guid>
+      <guid>https://gen1us2k.com/2016/05/16/how_to_learn_programming/</guid>
       <description>
 
 &lt;p&gt;Привет всем. Учитывая то, что я хочу помогать новичкам, но новичков много и каждый раз, с каждым новым новичком приходиться писать один и тот же текст, который описывает по сути все одно и тоже, то пора вынести его в один блог-пост.&lt;/p&gt;

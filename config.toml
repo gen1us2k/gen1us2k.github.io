@@ -1,4 +1,4 @@
-baseurl = "http://gen1us2k.github.io/"
+baseurl = "https://gen1us2k.github.io/"
 title = "Gen1us2k"
 theme = "ghostwriter"
 languageCode = "en-us"
@@ -9,7 +9,7 @@ canonifyurls = true
 
 [Author]
     name = "Gen1us2k"
-    profile = "https://google.com/+AndrewMinkinGen1us2k"
+    profile = "httpss://google.com/+AndrewMinkinGen1us2k"
 
 [Taxonomies]
     tag = "tags"
@@ -18,10 +18,10 @@ canonifyurls = true
     intro = true
     headline = "My headline"
     description = "My description"
-    github = "https://github.com/Gen1us2k"
-    linkedin = "https://linkedin.com/in/andrew-minkin-700a2523/"
-    gplus = "https://google.com/+AndrewMinkinGen1us2k"
-    twitter = "https://twitter.com/Gen1us2k"
+    github = "httpss://github.com/Gen1us2k"
+    linkedin = "httpss://linkedin.com/in/andrew-minkin-700a2523/"
+    gplus = "httpss://google.com/+AndrewMinkinGen1us2k"
+    twitter = "httpss://twitter.com/Gen1us2k"
 
 [Permalinks]
     post = "/:year/:month/:day/:filename/"

@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="https://www.w3.org/2005/Atom">
   <channel>
     <title>Deploy on Andrew Minkin</title>
-    <link>http://gen1us2k.com/tags/deploy/</link>
+    <link>https://gen1us2k.com/tags/deploy/</link>
     <description>Recent content in Deploy on Andrew Minkin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Gen1us2k</copyright>
     <lastBuildDate>Thu, 31 Mar 2016 15:23:31 +0600</lastBuildDate>
-    <atom:link href="http://gen1us2k.com/tags/deploy/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://gen1us2k.com/tags/deploy/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Используем Git в качестве инструмента для деплоя веб приложения</title>
-      <link>http://gen1us2k.com/2016/03/31/deploy/</link>
+      <link>https://gen1us2k.com/2016/03/31/deploy/</link>
       <pubDate>Thu, 31 Mar 2016 15:23:31 +0600</pubDate>
       
-      <guid>http://gen1us2k.com/2016/03/31/deploy/</guid>
+      <guid>https://gen1us2k.com/2016/03/31/deploy/</guid>
       <description>
 
 &lt;h3 id=&#34;что-имеем:0814af543608f4fd171b2e9cf43d9917&#34;&gt;Что имеем&lt;/h3&gt;

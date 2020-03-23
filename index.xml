@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="https://www.w3.org/2005/Atom">
   <channel>
     <title>Andrew Minkin</title>
-    <link>http://gen1us2k.com/</link>
+    <link>https://gen1us2k.com/</link>
     <description>Recent content on Andrew Minkin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Gen1us2k</copyright>
     <lastBuildDate>Thu, 23 Jun 2016 23:56:09 +0600</lastBuildDate>
-    <atom:link href="http://gen1us2k.com/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://gen1us2k.com/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Петр Зайцев о индексах</title>
-      <link>http://gen1us2k.com/2016/06/23/mysql-indexes/</link>
+      <link>https://gen1us2k.com/2016/06/23/mysql-indexes/</link>
       <pubDate>Thu, 23 Jun 2016 23:56:09 +0600</pubDate>
       
-      <guid>http://gen1us2k.com/2016/06/23/mysql-indexes/</guid>
+      <guid>https://gen1us2k.com/2016/06/23/mysql-indexes/</guid>
       <description>&lt;p&gt;Привет. Делюсь очень хорошим мастер классом про индексы в MySQL.
 Полезен всем. Очень хорошо расказывает о том, какие индексы используются в:&lt;/p&gt;
 
@@ -36,10 +36,10 @@
     
     <item>
       <title>Самые частые ошибки и пути решения при росте нагрузки и масштабировании</title>
-      <link>http://gen1us2k.com/2016/06/23/scaling1/</link>
+      <link>https://gen1us2k.com/2016/06/23/scaling1/</link>
       <pubDate>Thu, 23 Jun 2016 23:47:43 +0600</pubDate>
       
-      <guid>http://gen1us2k.com/2016/06/23/scaling1/</guid>
+      <guid>https://gen1us2k.com/2016/06/23/scaling1/</guid>
       <description>
 
 &lt;p&gt;Всем привет. Сегодня хотел бы рассказать о самых частых и детских болезней проектов.
@@ -74,10 +74,10 @@
     
     <item>
       <title>Обучение и программист</title>
-      <link>http://gen1us2k.com/2016/05/26/education/</link>
+      <link>https://gen1us2k.com/2016/05/26/education/</link>
       <pubDate>Thu, 26 May 2016 19:37:07 +0600</pubDate>
       
-      <guid>http://gen1us2k.com/2016/05/26/education/</guid>
+      <guid>https://gen1us2k.com/2016/05/26/education/</guid>
       <description>&lt;p&gt;Сегодня говорили с Костей, Ромой и Даником об образовании в программировании.
 Смотрите запись.&lt;/p&gt;
 
@@ -91,13 +91,13 @@
     
     <item>
       <title>Делаем АПИ на Django </title>
-      <link>http://gen1us2k.com/2016/05/23/django/</link>
+      <link>https://gen1us2k.com/2016/05/23/django/</link>
       <pubDate>Mon, 23 May 2016 23:42:56 +0600</pubDate>
       
-      <guid>http://gen1us2k.com/2016/05/23/django/</guid>
+      <guid>https://gen1us2k.com/2016/05/23/django/</guid>
       <description>&lt;p&gt;В воскресенье 22 мая записывал стрим о том, как сделать простую апи для работы с задачами. В системе у нас два типа пользователей: Заказчик и исполнитель.
 У задачи есть цена и чтобы исполнителю взять задачу на исполнение, ему нужны деньги на балансе. В видео раскрываются моменты с тем, как написать безопасное обновление баланса для пользователей. И на какие моменты нужно общать внимание.
-Код тут &lt;a href=&#34;https://github.com/gen1us2k/django-example&#34;&gt;https://github.com/gen1us2k/django-example&lt;/a&gt;&lt;/p&gt;
+Код тут &lt;a href=&#34;httpss://github.com/gen1us2k/django-example&#34;&gt;httpss://github.com/gen1us2k/django-example&lt;/a&gt;&lt;/p&gt;
 
 
 &lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
@@ -109,18 +109,18 @@
     
     <item>
       <title>Коммуникация с разработчиками. Как правильно ставить задачи</title>
-      <link>http://gen1us2k.com/2016/05/23/tasks_explained/</link>
+      <link>https://gen1us2k.com/2016/05/23/tasks_explained/</link>
       <pubDate>Mon, 23 May 2016 19:17:53 +0600</pubDate>
       
-      <guid>http://gen1us2k.com/2016/05/23/tasks_explained/</guid>
+      <guid>https://gen1us2k.com/2016/05/23/tasks_explained/</guid>
       <description>
 
-&lt;p&gt;Этот пост - продолжение поста &lt;a href=&#34;http://gen1us2k.com/2016/05/16/how_to_create_tasks/&#34;&gt;Коммуникация с программистами. Как практики стартапов могут помочь ставить задачи&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Этот пост - продолжение поста &lt;a href=&#34;https://gen1us2k.com/2016/05/16/how_to_create_tasks/&#34;&gt;Коммуникация с программистами. Как практики стартапов могут помочь ставить задачи&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;содержание:248a29a33dd7a443c1d35a42202f5f66&#34;&gt;Содержание:&lt;/h3&gt;
 
 &lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;http://gen1us2k.com/2016/05/16/how_to_create_tasks/&#34;&gt;Коммуникация с программистами. Как практики стартапов могут помочь ставить задачи&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://gen1us2k.com/2016/05/16/how_to_create_tasks/&#34;&gt;Коммуникация с программистами. Как практики стартапов могут помочь ставить задачи&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Как правильно ставить задачи&lt;/li&gt;
 &lt;/ol&gt;
 
@@ -214,10 +214,10 @@
     
     <item>
       <title>Как профилировать и оптимизировать Go</title>
-      <link>http://gen1us2k.com/2016/05/23/go-profiling/</link>
+      <link>https://gen1us2k.com/2016/05/23/go-profiling/</link>
       <pubDate>Mon, 23 May 2016 11:28:38 +0600</pubDate>
       
-      <guid>http://gen1us2k.com/2016/05/23/go-profiling/</guid>
+      <guid>https://gen1us2k.com/2016/05/23/go-profiling/</guid>
       <description>&lt;p&gt;Хороший доклад от Убера о том, как профайлить и оптимизировать го программы.&lt;/p&gt;
 
 
@@ -230,28 +230,28 @@
     
     <item>
       <title>Проекты</title>
-      <link>http://gen1us2k.com/project/</link>
+      <link>https://gen1us2k.com/project/</link>
       <pubDate>Tue, 17 May 2016 00:21:43 +0600</pubDate>
       
-      <guid>http://gen1us2k.com/project/</guid>
-      <description>&lt;p&gt;Все проекты доступны на &lt;a href=&#34;https://github.com/gen1us2k&#34;&gt;Github&lt;/a&gt; . В основном это всякие мелкие пет-прожекты.
+      <guid>https://gen1us2k.com/project/</guid>
+      <description>&lt;p&gt;Все проекты доступны на &lt;a href=&#34;httpss://github.com/gen1us2k&#34;&gt;Github&lt;/a&gt; . В основном это всякие мелкие пет-прожекты.
 Наиболее интересные проекты:&lt;/p&gt;
 
 &lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/meshbird/meshbird&#34;&gt;MeshBird&lt;/a&gt; - overlay сеть для чего угодно под Linux/FreeBSD/MacOs&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://gen1us2k.com/gen1us2k/ariadna&#34;&gt;Ariadna&lt;/a&gt; - геокодер, который отлично ищет адреса в Бишкеке. Демок открытых нет :(&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/gen1us2k/python-whois&#34;&gt;Python-whois&lt;/a&gt; - либа для питона, для проверки статуса домена.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/gen1us2k/django-osmp&#34;&gt;Django-OSMP&lt;/a&gt; - прием платежей по OSMP протоколу для Django. По хорошему нужно переписать его и написать тесты.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;httpss://github.com/meshbird/meshbird&#34;&gt;MeshBird&lt;/a&gt; - overlay сеть для чего угодно под Linux/FreeBSD/MacOs&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;httpss://gen1us2k.com/gen1us2k/ariadna&#34;&gt;Ariadna&lt;/a&gt; - геокодер, который отлично ищет адреса в Бишкеке. Демок открытых нет :(&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;httpss://github.com/gen1us2k/python-whois&#34;&gt;Python-whois&lt;/a&gt; - либа для питона, для проверки статуса домена.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;httpss://github.com/gen1us2k/django-osmp&#34;&gt;Django-OSMP&lt;/a&gt; - прием платежей по OSMP протоколу для Django. По хорошему нужно переписать его и написать тесты.&lt;/li&gt;
 &lt;/ol&gt;
 </description>
     </item>
     
     <item>
       <title>Коммуникация с программистами. Как практики стартапов могут помочь ставить задачи.</title>
-      <link>http://gen1us2k.com/2016/05/16/how_to_create_tasks/</link>
+      <link>https://gen1us2k.com/2016/05/16/how_to_create_tasks/</link>
       <pubDate>Mon, 16 May 2016 20:45:51 +0600</pubDate>
       
-      <guid>http://gen1us2k.com/2016/05/16/how_to_create_tasks/</guid>
+      <guid>https://gen1us2k.com/2016/05/16/how_to_create_tasks/</guid>
       <description>
 
 &lt;p&gt;Этим постом я начинаю цикл статей по коммуникации с разработчиками. Эта вводная статья, которая расскажет о том, как практики стартапов могут помочь вам в постановке задач программистам, да и не только.&lt;/p&gt;
@@ -260,7 +260,7 @@
 
 &lt;ol&gt;
 &lt;li&gt;Коммуникация с программистами. Как практики стартапов могут помочь ставить задачи&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://gen1us2k.com/2016/05/23/tasks_explained/&#34;&gt;Как правильно ставить задачи&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://gen1us2k.com/2016/05/23/tasks_explained/&#34;&gt;Как правильно ставить задачи&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;Коммуникация с программистами. Как практики стартапов могут помочь ставить задачи
@@ -380,10 +380,10 @@
     
     <item>
       <title>Как научиться программировать?</title>
-      <link>http://gen1us2k.com/2016/05/16/how_to_learn_programming/</link>
+      <link>https://gen1us2k.com/2016/05/16/how_to_learn_programming/</link>
       <pubDate>Mon, 16 May 2016 16:18:21 +0600</pubDate>
       
-      <guid>http://gen1us2k.com/2016/05/16/how_to_learn_programming/</guid>
+      <guid>https://gen1us2k.com/2016/05/16/how_to_learn_programming/</guid>
       <description>
 
 &lt;p&gt;Привет всем. Учитывая то, что я хочу помогать новичкам, но новичков много и каждый раз, с каждым новым новичком приходиться писать один и тот же текст, который описывает по сути все одно и тоже, то пора вынести его в один блог-пост.&lt;/p&gt;
@@ -469,91 +469,91 @@
     
     <item>
       <title>Some info about microservices  </title>
-      <link>http://gen1us2k.com/2016/04/09/microservices/</link>
+      <link>https://gen1us2k.com/2016/04/09/microservices/</link>
       <pubDate>Sat, 09 Apr 2016 22:57:20 +0600</pubDate>
       
-      <guid>http://gen1us2k.com/2016/04/09/microservices/</guid>
+      <guid>https://gen1us2k.com/2016/04/09/microservices/</guid>
       <description>&lt;p&gt;Пост, больше для того, чтобы сохранить ссылки себе.
 Много интересного материала о микросервисах.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://nordicapis.com/writing-microservices-in-go/&#34;&gt;Writing microservices in go&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://nordicapis.com/writing-microservices-in-go/&#34;&gt;Writing microservices in go&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://nordicapis.com/writing-microservices-in-go-part-ii-when-not-to-use-go/&#34;&gt;Writing microservices in go path 2&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://nordicapis.com/writing-microservices-in-go-part-ii-when-not-to-use-go/&#34;&gt;Writing microservices in go path 2&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://abdullin.com/golang/&#34;&gt;Go good parts&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;httpss://abdullin.com/golang/&#34;&gt;Go good parts&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://nicholasjackson.github.io/microservices/go/building-and-testing-microservices-part1/&#34;&gt;Building and testing microservices&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://nicholasjackson.github.io/microservices/go/building-and-testing-microservices-part1/&#34;&gt;Building and testing microservices&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://www.thedotpost.com/2015/11/peter-bourgon-a-case-for-microservices&#34;&gt;Peter bourgon a case for microservices&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.thedotpost.com/2015/11/peter-bourgon-a-case-for-microservices&#34;&gt;Peter bourgon a case for microservices&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://developers.google.com/protocol-buffers/docs/proto#specifying-field-rules&#34;&gt;Protobuf&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;httpss://developers.google.com/protocol-buffers/docs/proto#specifying-field-rules&#34;&gt;Protobuf&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=yszygk1cpEc&#34;&gt;Advanced testing with Go&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;httpss://www.youtube.com/watch?v=yszygk1cpEc&#34;&gt;Advanced testing with Go&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=wgdBVIX9ifA&#34;&gt;Microservices • Martin Fowler&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;httpss://www.youtube.com/watch?v=wgdBVIX9ifA&#34;&gt;Microservices • Martin Fowler&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://labs.unacast.com/2016/03/10/monitoring-microservices-synthetic-transactions-in-go/&#34;&gt;Monitoring microservices with Synthetic Transactions in Go&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://labs.unacast.com/2016/03/10/monitoring-microservices-synthetic-transactions-in-go/&#34;&gt;Monitoring microservices with Synthetic Transactions in Go&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://martinfowler.com/articles/microservice-trade-offs.html&#34;&gt;Microservice Trade-Offs&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://martinfowler.com/articles/microservice-trade-offs.html&#34;&gt;Microservice Trade-Offs&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://www.infoq.com/presentations/7-sins-microservices&#34;&gt;The Seven Deadly Sins of Microservices&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.infoq.com/presentations/7-sins-microservices&#34;&gt;The Seven Deadly Sins of Microservices&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://www.nginx.com/blog/refactoring-a-monolith-into-microservices/&#34;&gt;Refactoring a Monolith into Microservices&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;httpss://www.nginx.com/blog/refactoring-a-monolith-into-microservices/&#34;&gt;Refactoring a Monolith into Microservices&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=f40EybJwgBo&#34;&gt;How Microservices fail and what to do about it&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;httpss://www.youtube.com/watch?v=f40EybJwgBo&#34;&gt;How Microservices fail and what to do about it&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://nordicapis.com/how-to-control-user-identity-within-microservices/&#34;&gt;How to control user identity within microservices&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://nordicapis.com/how-to-control-user-identity-within-microservices/&#34;&gt;How to control user identity within microservices&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>С чего начать изучать Go?</title>
-      <link>http://gen1us2k.com/2016/04/01/golang/</link>
+      <link>https://gen1us2k.com/2016/04/01/golang/</link>
       <pubDate>Fri, 01 Apr 2016 21:39:43 +0600</pubDate>
       
-      <guid>http://gen1us2k.com/2016/04/01/golang/</guid>
+      <guid>https://gen1us2k.com/2016/04/01/golang/</guid>
       <description>
 
 &lt;p&gt;Привет всем!
 Так сложилось в жизни, что я уже несколько месяцев пишу на Go.
 И этот язык мне нравится. Нравится своей простотой и мощной стандартной библиотекой. Мощной, но не идеальной. Пока-что единственная задача, которую я решал не стандартной библиотекой - это генерация UUID.
 Но в интернетах много решений этой проблемы.
-На стантартной библиотеке можно делать много хороших вещей. Например сделать полноценный вебсервис, хоть и простой, но полностью на стандартной библиотеке, например &lt;a href=&#34;https://github.com/gen1us2k/slack-typeform&#34;&gt;Slack-typeform&lt;/a&gt;. Сервис, который использует TypeForm для заполнения формы, и автоматически рассылает инвайты в слак, используя API обоих сервисов.&lt;/p&gt;
+На стантартной библиотеке можно делать много хороших вещей. Например сделать полноценный вебсервис, хоть и простой, но полностью на стандартной библиотеке, например &lt;a href=&#34;httpss://github.com/gen1us2k/slack-typeform&#34;&gt;Slack-typeform&lt;/a&gt;. Сервис, который использует TypeForm для заполнения формы, и автоматически рассылает инвайты в слак, используя API обоих сервисов.&lt;/p&gt;
 
 &lt;h3 id=&#34;с-чего-начать:27e4f973bd3581492ba026d8617cd0db&#34;&gt;С чего начать?&lt;/h3&gt;
 
-&lt;p&gt;Начать можно с хабра &lt;a href=&#34;https://habrahabr.ru/post/269355/&#34;&gt;С чего начать новичку в Go&lt;/a&gt;
+&lt;p&gt;Начать можно с хабра &lt;a href=&#34;httpss://habrahabr.ru/post/269355/&#34;&gt;С чего начать новичку в Go&lt;/a&gt;
 Или же можно пойти по оффициальному пути.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://tour.golang.org&#34;&gt;Тур по Go&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;httpss://tour.golang.org&#34;&gt;Тур по Go&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;Или же &lt;a href=&#34;http://www.golang-book.com&#34;&gt;Книги по Go&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Или же &lt;a href=&#34;https://www.golang-book.com&#34;&gt;Книги по Go&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;или &lt;a href=&#34;https://gobyexample.com&#34;&gt;Go на примерах&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;или &lt;a href=&#34;httpss://gobyexample.com&#34;&gt;Go на примерах&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;В принципе вам хватит потратить пару часов на туре по Go. Дальше можно писать код.
 Из книг рекомендую &amp;ldquo;Язык программирования Go&amp;rdquo; от Кернигана.&lt;/p&gt;
 
 &lt;p&gt;Из видео стоит посмотреть&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=jgVhBThJdXc&#34;&gt;Программирование на Go&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;httpss://www.youtube.com/watch?v=jgVhBThJdXc&#34;&gt;Программирование на Go&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=f6kdp27TYZs&#34;&gt;Go Concurrency Patterns&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;httpss://www.youtube.com/watch?v=f6kdp27TYZs&#34;&gt;Go Concurrency Patterns&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=cN_DpYBzKso&#34;&gt;Concurrency is not parallelism&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;httpss://www.youtube.com/watch?v=cN_DpYBzKso&#34;&gt;Concurrency is not parallelism&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=QDDwwePbDtw&#34;&gt;Anvanced Go concurrency patterns&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;httpss://www.youtube.com/watch?v=QDDwwePbDtw&#34;&gt;Anvanced Go concurrency patterns&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;Позже обязательно к прочтению &lt;a href=&#34;https://gocodecloud.com/blog/2016/03/29/go-vendoring-beginner-tutorial/&#34;&gt;Вендоринг для начинающих&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Позже обязательно к прочтению &lt;a href=&#34;httpss://gocodecloud.com/blog/2016/03/29/go-vendoring-beginner-tutorial/&#34;&gt;Вендоринг для начинающих&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Тупняк - как чума 21 века</title>
-      <link>http://gen1us2k.com/2016/03/31/plague/</link>
+      <link>https://gen1us2k.com/2016/03/31/plague/</link>
       <pubDate>Thu, 31 Mar 2016 20:10:50 +0600</pubDate>
       
-      <guid>http://gen1us2k.com/2016/03/31/plague/</guid>
+      <guid>https://gen1us2k.com/2016/03/31/plague/</guid>
       <description>&lt;p&gt;Очень полезный доклад о личной эффективности. Он фишку сечет и информацию доносит очень хорошо.&lt;/p&gt;
 
 &lt;p&gt;Вам знакома ситуация, когда вы зашиваетесь? Когда куча тасков в issue трекере, когда куча не отвеченных емейлов? Тогда это видео вам будет полезно к просмотру&lt;/p&gt;
@@ -568,10 +568,10 @@
     
     <item>
       <title>Как я проходил собеседование в Яндекс</title>
-      <link>http://gen1us2k.com/2016/03/31/yandex/</link>
+      <link>https://gen1us2k.com/2016/03/31/yandex/</link>
       <pubDate>Thu, 31 Mar 2016 19:55:34 +0600</pubDate>
       
-      <guid>http://gen1us2k.com/2016/03/31/yandex/</guid>
+      <guid>https://gen1us2k.com/2016/03/31/yandex/</guid>
       <description>
 
 &lt;h3 id=&#34;как-все-начиналось:c31a51a708fa01c7bfe111687ae6852b&#34;&gt;Как все начиналось&lt;/h3&gt;
@@ -623,7 +623,7 @@
 В этот раз GPS в телефоне не смог определить мое местоположение и пришлось добираться, спрашивая у прохожих.
 И вот я добрался.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://lmndeit.kg/wp-content/uploads/2016/03/yandex-hr.jpg&#34; alt=&#34;Yandex&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://lmndeit.kg/wp-content/uploads/2016/03/yandex-hr.jpg&#34; alt=&#34;Yandex&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Пришел на ресепшн и меня вскоре проводили до места собеседования.&lt;/p&gt;
 
@@ -702,26 +702,26 @@
     
     <item>
       <title>Сontact</title>
-      <link>http://gen1us2k.com/page/contact/</link>
+      <link>https://gen1us2k.com/page/contact/</link>
       <pubDate>Thu, 31 Mar 2016 19:51:42 +0600</pubDate>
       
-      <guid>http://gen1us2k.com/page/contact/</guid>
+      <guid>https://gen1us2k.com/page/contact/</guid>
       <description>&lt;p&gt;Для связи со мной вы можете написать мне на почту minkin dot andrew at gmail dot com. Либо в одной из следующих сетей:&lt;/p&gt;
 
 &lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/Gen1us2k&#34;&gt;Github&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.facebook.com/Gen1us2k&#34;&gt;Facebook&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.linkedin.com/in/andrew-minkin-700a2523&#34;&gt;Linkedin&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;httpss://github.com/Gen1us2k&#34;&gt;Github&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;httpss://www.facebook.com/Gen1us2k&#34;&gt;Facebook&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;httpss://www.linkedin.com/in/andrew-minkin-700a2523&#34;&gt;Linkedin&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 </description>
     </item>
     
     <item>
       <title>Обо мне</title>
-      <link>http://gen1us2k.com/page/about/</link>
+      <link>https://gen1us2k.com/page/about/</link>
       <pubDate>Thu, 31 Mar 2016 19:50:32 +0600</pubDate>
       
-      <guid>http://gen1us2k.com/page/about/</guid>
+      <guid>https://gen1us2k.com/page/about/</guid>
       <description>&lt;p&gt;Тимлид в Namba Taxi. Пишу код на Python/Go. Разбираюсь с интересными задачами.&lt;/p&gt;
 </description>
     </item>

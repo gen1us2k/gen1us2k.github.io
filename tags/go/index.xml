@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="https://www.w3.org/2005/Atom">
   <channel>
     <title>Go on Andrew Minkin</title>
-    <link>http://gen1us2k.com/tags/go/</link>
+    <link>https://gen1us2k.com/tags/go/</link>
     <description>Recent content in Go on Andrew Minkin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Gen1us2k</copyright>
     <lastBuildDate>Mon, 23 May 2016 11:28:38 +0600</lastBuildDate>
-    <atom:link href="http://gen1us2k.com/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://gen1us2k.com/tags/go/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Как профилировать и оптимизировать Go</title>
-      <link>http://gen1us2k.com/2016/05/23/go-profiling/</link>
+      <link>https://gen1us2k.com/2016/05/23/go-profiling/</link>
       <pubDate>Mon, 23 May 2016 11:28:38 +0600</pubDate>
       
-      <guid>http://gen1us2k.com/2016/05/23/go-profiling/</guid>
+      <guid>https://gen1us2k.com/2016/05/23/go-profiling/</guid>
       <description>&lt;p&gt;Хороший доклад от Убера о том, как профайлить и оптимизировать го программы.&lt;/p&gt;
 
 
@@ -28,54 +28,54 @@
     
     <item>
       <title>Some info about microservices  </title>
-      <link>http://gen1us2k.com/2016/04/09/microservices/</link>
+      <link>https://gen1us2k.com/2016/04/09/microservices/</link>
       <pubDate>Sat, 09 Apr 2016 22:57:20 +0600</pubDate>
       
-      <guid>http://gen1us2k.com/2016/04/09/microservices/</guid>
+      <guid>https://gen1us2k.com/2016/04/09/microservices/</guid>
       <description>&lt;p&gt;Пост, больше для того, чтобы сохранить ссылки себе.
 Много интересного материала о микросервисах.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://nordicapis.com/writing-microservices-in-go/&#34;&gt;Writing microservices in go&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://nordicapis.com/writing-microservices-in-go/&#34;&gt;Writing microservices in go&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://nordicapis.com/writing-microservices-in-go-part-ii-when-not-to-use-go/&#34;&gt;Writing microservices in go path 2&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://nordicapis.com/writing-microservices-in-go-part-ii-when-not-to-use-go/&#34;&gt;Writing microservices in go path 2&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://abdullin.com/golang/&#34;&gt;Go good parts&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;httpss://abdullin.com/golang/&#34;&gt;Go good parts&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://nicholasjackson.github.io/microservices/go/building-and-testing-microservices-part1/&#34;&gt;Building and testing microservices&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://nicholasjackson.github.io/microservices/go/building-and-testing-microservices-part1/&#34;&gt;Building and testing microservices&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://www.thedotpost.com/2015/11/peter-bourgon-a-case-for-microservices&#34;&gt;Peter bourgon a case for microservices&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.thedotpost.com/2015/11/peter-bourgon-a-case-for-microservices&#34;&gt;Peter bourgon a case for microservices&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://developers.google.com/protocol-buffers/docs/proto#specifying-field-rules&#34;&gt;Protobuf&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;httpss://developers.google.com/protocol-buffers/docs/proto#specifying-field-rules&#34;&gt;Protobuf&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=yszygk1cpEc&#34;&gt;Advanced testing with Go&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;httpss://www.youtube.com/watch?v=yszygk1cpEc&#34;&gt;Advanced testing with Go&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=wgdBVIX9ifA&#34;&gt;Microservices • Martin Fowler&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;httpss://www.youtube.com/watch?v=wgdBVIX9ifA&#34;&gt;Microservices • Martin Fowler&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://labs.unacast.com/2016/03/10/monitoring-microservices-synthetic-transactions-in-go/&#34;&gt;Monitoring microservices with Synthetic Transactions in Go&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://labs.unacast.com/2016/03/10/monitoring-microservices-synthetic-transactions-in-go/&#34;&gt;Monitoring microservices with Synthetic Transactions in Go&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://martinfowler.com/articles/microservice-trade-offs.html&#34;&gt;Microservice Trade-Offs&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://martinfowler.com/articles/microservice-trade-offs.html&#34;&gt;Microservice Trade-Offs&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://www.infoq.com/presentations/7-sins-microservices&#34;&gt;The Seven Deadly Sins of Microservices&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.infoq.com/presentations/7-sins-microservices&#34;&gt;The Seven Deadly Sins of Microservices&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://www.nginx.com/blog/refactoring-a-monolith-into-microservices/&#34;&gt;Refactoring a Monolith into Microservices&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;httpss://www.nginx.com/blog/refactoring-a-monolith-into-microservices/&#34;&gt;Refactoring a Monolith into Microservices&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=f40EybJwgBo&#34;&gt;How Microservices fail and what to do about it&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;httpss://www.youtube.com/watch?v=f40EybJwgBo&#34;&gt;How Microservices fail and what to do about it&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://nordicapis.com/how-to-control-user-identity-within-microservices/&#34;&gt;How to control user identity within microservices&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://nordicapis.com/how-to-control-user-identity-within-microservices/&#34;&gt;How to control user identity within microservices&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Ariadna. Зачем нужен еще один геокодер для ОСМ?</title>
-      <link>http://gen1us2k.com/2016/03/31/ariadna/</link>
+      <link>https://gen1us2k.com/2016/03/31/ariadna/</link>
       <pubDate>Thu, 31 Mar 2016 19:45:23 +0600</pubDate>
       
-      <guid>http://gen1us2k.com/2016/03/31/ariadna/</guid>
+      <guid>https://gen1us2k.com/2016/03/31/ariadna/</guid>
       <description>
 
 &lt;p&gt;Всем привет!&lt;/p&gt;
 
-&lt;p&gt;Совсем недавно я закончил делать геокодер для своих целей &lt;a href=&#34;https://github.com/gen1us2k/ariadna&#34;&gt;Ariadna&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Совсем недавно я закончил делать геокодер для своих целей &lt;a href=&#34;httpss://github.com/gen1us2k/ariadna&#34;&gt;Ariadna&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;В статье не будет ни строчки кода на Go.  Зато будет полное описание работы геокодера и проблем, с которыми я встречался. А код можете посмотреть на гитхабе.&lt;/p&gt;
 
@@ -132,9 +132,9 @@
 Были:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/pelias/pelias&#34;&gt;Pelias&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/twain47/Nominatim&#34;&gt;Nominatim&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://photon.komoot.de/&#34;&gt;Photon&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;httpss://github.com/pelias/pelias&#34;&gt;Pelias&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;httpss://github.com/twain47/Nominatim&#34;&gt;Nominatim&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;httpss://photon.komoot.de/&#34;&gt;Photon&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Чем не устраивал номинатим, который у нас был:&lt;/p&gt;
@@ -173,7 +173,7 @@
 &lt;li&gt;Ищем&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;Для реализации я выбрал Go, учитывая проекты типа &lt;a href=&#34;https://github.com/pelias/pbf2json&#34;&gt;pbf2json&lt;/a&gt;, &lt;a href=&#34;github.com/kellydunn/golang-geo&#34;&gt;golang-geo&lt;/a&gt; и многих других для обработки геоданных. Также хотелось покачать скилл именно в нем.&lt;/p&gt;
+&lt;p&gt;Для реализации я выбрал Go, учитывая проекты типа &lt;a href=&#34;httpss://github.com/pelias/pbf2json&#34;&gt;pbf2json&lt;/a&gt;, &lt;a href=&#34;github.com/kellydunn/golang-geo&#34;&gt;golang-geo&lt;/a&gt; и многих других для обработки геоданных. Также хотелось покачать скилл именно в нем.&lt;/p&gt;
 
 &lt;h3 id=&#34;реализация:ef594d42b562dc51868faca891ac3a45&#34;&gt;Реализация&lt;/h3&gt;
 

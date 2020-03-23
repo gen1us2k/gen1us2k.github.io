@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="https://www.w3.org/2005/Atom">
   <channel>
     <title>Elasticsearch on Andrew Minkin</title>
-    <link>http://gen1us2k.com/tags/elasticsearch/</link>
+    <link>https://gen1us2k.com/tags/elasticsearch/</link>
     <description>Recent content in Elasticsearch on Andrew Minkin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Gen1us2k</copyright>
     <lastBuildDate>Thu, 31 Mar 2016 19:45:23 +0600</lastBuildDate>
-    <atom:link href="http://gen1us2k.com/tags/elasticsearch/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://gen1us2k.com/tags/elasticsearch/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Ariadna. Зачем нужен еще один геокодер для ОСМ?</title>
-      <link>http://gen1us2k.com/2016/03/31/ariadna/</link>
+      <link>https://gen1us2k.com/2016/03/31/ariadna/</link>
       <pubDate>Thu, 31 Mar 2016 19:45:23 +0600</pubDate>
       
-      <guid>http://gen1us2k.com/2016/03/31/ariadna/</guid>
+      <guid>https://gen1us2k.com/2016/03/31/ariadna/</guid>
       <description>
 
 &lt;p&gt;Всем привет!&lt;/p&gt;
 
-&lt;p&gt;Совсем недавно я закончил делать геокодер для своих целей &lt;a href=&#34;https://github.com/gen1us2k/ariadna&#34;&gt;Ariadna&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Совсем недавно я закончил делать геокодер для своих целей &lt;a href=&#34;httpss://github.com/gen1us2k/ariadna&#34;&gt;Ariadna&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;В статье не будет ни строчки кода на Go.  Зато будет полное описание работы геокодера и проблем, с которыми я встречался. А код можете посмотреть на гитхабе.&lt;/p&gt;
 
@@ -77,9 +77,9 @@
 Были:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/pelias/pelias&#34;&gt;Pelias&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/twain47/Nominatim&#34;&gt;Nominatim&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://photon.komoot.de/&#34;&gt;Photon&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;httpss://github.com/pelias/pelias&#34;&gt;Pelias&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;httpss://github.com/twain47/Nominatim&#34;&gt;Nominatim&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;httpss://photon.komoot.de/&#34;&gt;Photon&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Чем не устраивал номинатим, который у нас был:&lt;/p&gt;
@@ -118,7 +118,7 @@
 &lt;li&gt;Ищем&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;Для реализации я выбрал Go, учитывая проекты типа &lt;a href=&#34;https://github.com/pelias/pbf2json&#34;&gt;pbf2json&lt;/a&gt;, &lt;a href=&#34;github.com/kellydunn/golang-geo&#34;&gt;golang-geo&lt;/a&gt; и многих других для обработки геоданных. Также хотелось покачать скилл именно в нем.&lt;/p&gt;
+&lt;p&gt;Для реализации я выбрал Go, учитывая проекты типа &lt;a href=&#34;httpss://github.com/pelias/pbf2json&#34;&gt;pbf2json&lt;/a&gt;, &lt;a href=&#34;github.com/kellydunn/golang-geo&#34;&gt;golang-geo&lt;/a&gt; и многих других для обработки геоданных. Также хотелось покачать скилл именно в нем.&lt;/p&gt;
 
 &lt;h3 id=&#34;реализация:ef594d42b562dc51868faca891ac3a45&#34;&gt;Реализация&lt;/h3&gt;
 
