@@ -28,6 +28,10 @@
       <div id='italy'></div>
       <div id='japan'></div>
     </div>
+     <div class="covid3" style="display: flex; margin: auto; justify-content: space-around;  ">
+      <div id='kz'></div>
+      <div id='uz'></div>
+    </div>
     <div class="market" style="text-align: center; display: grid; grid-template-columns: repeat(2, 1fr); grid-gap: 40px; max-width: 100%;">
       <!-- SOM -->
       <img src="https://www.fxexchangerate.com/charts/usd-kgs-180-day-exchange-rates-history-chart.png">
@@ -55,6 +59,8 @@
       createChart(document.querySelector("#usa"), { country: "US" });
       createChart(document.querySelector("#italy"), { country: "Italy" });
       createChart(document.querySelector("#japan"), { country: "Japan" });
+      createChart(document.querySelector("#kz"), { country: "Kazakhstan" });
+      createChart(document.querySelector("#uz"), { country: "Uzbekistan" });
     </script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161641331-1"></script>
