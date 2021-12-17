@@ -1,14 +1,11 @@
-/**
- * Created by fabiomadeira on 25/02/15.
- */
-// jQuery for page scrolling feature
-jQuery(document).ready(function(e) {
-    e(".scroll").click(function(t) {
-        t.preventDefault();
-        e("html,body").animate({
-            scrollTop: e(this.hash).offset().top
-        }, 1e3)
-    })
-});
-
-
+// Copyright 2014-2015 Twitter, Inc.
+// Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+    var msViewportStyle = document.createElement('style')
+    msViewportStyle.appendChild(
+        document.createTextNode(
+            '@-ms-viewport{width:auto!important}'
+        )
+    )
+    document.querySelector('head').appendChild(msViewportStyle)
+}

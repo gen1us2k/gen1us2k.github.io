@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on Andrew &#34;Chuck&#34; Minkin</title>
-    <link>https://gen1us2k.com/categories/</link>
-    <description>Recent content in Categories on Andrew &#34;Chuck&#34; Minkin</description>
+    <title>Categories on Andrew Minkin</title>
+    <link>https://gen1us2k.github.io/categories/</link>
+    <description>Recent content in Categories on Andrew Minkin</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    
-	<atom:link href="https://gen1us2k.com/categories/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-US</language><atom:link href="https://gen1us2k.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
