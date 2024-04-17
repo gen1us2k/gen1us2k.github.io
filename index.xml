@@ -4,7 +4,8 @@
     <title>Andrew Minkin</title>
     <link>https://gen1us2k.com/</link>
     <description>Recent content on Andrew Minkin</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language><atom:link href="https://gen1us2k.com/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo 0.125.0</generator>
+    <language>en-US</language>
+    <atom:link href="https://gen1us2k.com/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
